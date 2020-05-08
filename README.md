@@ -26,7 +26,7 @@ Like this one:
 
 ## How to install?
 
-Easy way from this repository:
+Easy way:
 
 * [Download](https://raw.githubusercontent.com/rmaqueda/GrapeCI/develop/Archive/GrapeCI.app-1.0.0.tar.gz), unzip and install
 * If an security alert appear, Go to: *Preferences -> Security* and allow run GrapeCI

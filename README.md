@@ -12,14 +12,13 @@ GrapeCI launch the build script when these changes are detected:
 * New commit on a pull request
 
 When the build script finish, a build status is created for this commit.
-You could setup checks in the repository to allow merge pull request only when the statues success.
 
 ## How to install?
 
 Easy way from this repository:
 
-* [Download](https://raw.githubusercontent.com/rmaqueda/GrapeCI/develop/Archive/GrapeCI.app.tar.gz), unzip and install.
-* Go to Preferences -> Security and Allow run GrapeCI
+* [Download](https://raw.githubusercontent.com/rmaqueda/GrapeCI/develop/Archive/GrapeCI.app-1.0.0.tar.gz), unzip and install
+* If an security alert appear, Go to: *Preferences -> Security* and allow run GrapeCI
 
 
 Build by yourself:

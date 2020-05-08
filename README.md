@@ -66,3 +66,10 @@ The [documentation folder](./Documentation/PipelineExamples/) contains examples 
 * Learn Swift Combine and SwiftUI
 * Have a free and easy to setup continuous integration tool
 * Have fun :)
+
+
+## Do you want to contribute?
+
+This would be great!
+
+The project is an early state, if you think is useful for you or you want to contribute, do it 💪

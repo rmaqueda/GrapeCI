@@ -19,7 +19,10 @@ GrapeCI launch the build script when these changes are detected:
 * New commit on the default branch
 * New commit on a pull request
 
-When the build script finish, a build status is created for this commit.
+When the build script finish, a build status is created for this commit. 
+Like this one: 
+
+![](./Documentation/ScreenShots/Commit_Status.png)
 
 ## How to install?
 

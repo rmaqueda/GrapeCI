@@ -3,7 +3,7 @@
 
 ## What is GrapeCI?
 
-It's a work in progress, **serverless**, **free**, continuous integration software written in Swift.
+It's a work in progress, **serverless**, continuous integration software written in Swift.
 
 Connect your Bitbucket or GitHub accounts and set up a build script for yours repository.
 GrapeCI launch the build script when these changes are detected:
@@ -42,5 +42,5 @@ The [documentation folder](./Documentation/PipelineExamples/) contains examples 
 ## Why am I building this?
 
 * Learn Swift Combine and SwiftUI
-* Have a **free** and easy to setup continuous integration tool
+* Have a free and easy to setup continuous integration tool
 * Have fun :)

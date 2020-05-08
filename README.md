@@ -16,9 +16,17 @@ You could setup checks in the repository to allow merge pull request only when t
 
 ## How to install?
 
+Easy way from this repository:
+
+* [Download](https://raw.githubusercontent.com/rmaqueda/GrapeCI/develop/Archive/GrapeCI.app.tar.gz), unzip and install.
+* Go to Preferences -> Security and Allow run GrapeCI
+
+
+Build by yourself:
+
 * Update dependencies with Carthage
 * Open Xcode project
-* Edit the GrapeCI scheme and set the oauth secrets (you will need to setup this aouth configuration first on Github or Bitbucket)
+* Edit the GrapeCI scheme and write the oauth secrets enviroment varialbes (You will need to setup the aouth configuration firstly on [Github](https://github.com/settings/applications/new) or [Bitbucket](https://developer.atlassian.com/cloud/bitbucket/oauth-2/))
 * Run or Archive the project
 
 ## Build script

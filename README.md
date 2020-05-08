@@ -28,9 +28,10 @@ Like this one:
 
 Easy way:
 
-* [Download](https://raw.githubusercontent.com/rmaqueda/GrapeCI/develop/Archive/GrapeCI.app-1.0.0.tar.gz), unzip and install
-* If an security alert appear, Go to: *Preferences -> Security* and allow run GrapeCI
-
+* [Download](https://raw.githubusercontent.com/rmaqueda/GrapeCI/develop/Archive/GrapeCI.app-1.0.0.tar.gz), unzip and run.
+* If you see this security alert. Go to: *Preferences -> Security* and allow run GrapeCI.
+This is because GrapeCI needs run without sandbox in order to run the pipelines.	
+![](./Documentation/ScreenShots/SecurityAlert.png)	
 
 Build by yourself:
 
@@ -63,7 +64,7 @@ The [documentation folder](./Documentation/PipelineExamples/) contains examples 
 
 ## Why am I building this?
 
-* Learn Swift Combine and SwiftUI
+* Learn Apple Combine, SwiftUI and how create a Mac App.
 * Have a free and easy to setup continuous integration tool
 * Have fun :)
 

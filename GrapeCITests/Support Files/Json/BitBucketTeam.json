@@ -1,0 +1,120 @@
+{
+	"pagelen": 10,
+	"values": [{
+		"permission": "admin",
+		"type": "team_permission",
+		"user": {
+			"display_name": "rmaqueda",
+			"uuid": "{b17dfb37-4bbd-4f5a-8d23-fd67b771f2b6}",
+			"links": {
+				"self": {
+					"href": "https://api.bitbucket.org/2.0/users/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D"
+				},
+				"html": {
+					"href": "https://bitbucket.org/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D/"
+				},
+				"avatar": {
+					"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:5b636254-9e7a-4894-8f0c-f65c18730042/8fe34e79-b035-433d-a067-511bcc63ef11/128"
+				}
+			},
+			"nickname": "rmaqueda",
+			"type": "user",
+			"account_id": "557058:5b636254-9e7a-4894-8f0c-f65c18730042"
+		},
+		"team": {
+			"username": "audmappteam",
+			"display_name": "AudMapp Team",
+			"type": "team",
+			"uuid": "{06ad5019-e1c7-4c0b-93b8-33d731b38f32}",
+			"links": {
+				"self": {
+					"href": "https://api.bitbucket.org/2.0/teams/%7B06ad5019-e1c7-4c0b-93b8-33d731b38f32%7D"
+				},
+				"html": {
+					"href": "https://bitbucket.org/%7B06ad5019-e1c7-4c0b-93b8-33d731b38f32%7D/"
+				},
+				"avatar": {
+					"href": "https://bitbucket.org/account/audmappteam/avatar/"
+				}
+			}
+		}
+	}, {
+		"permission": "admin",
+		"type": "team_permission",
+		"user": {
+			"display_name": "rmaqueda",
+			"uuid": "{b17dfb37-4bbd-4f5a-8d23-fd67b771f2b6}",
+			"links": {
+				"self": {
+					"href": "https://api.bitbucket.org/2.0/users/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D"
+				},
+				"html": {
+					"href": "https://bitbucket.org/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D/"
+				},
+				"avatar": {
+					"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:5b636254-9e7a-4894-8f0c-f65c18730042/8fe34e79-b035-433d-a067-511bcc63ef11/128"
+				}
+			},
+			"nickname": "rmaqueda",
+			"type": "user",
+			"account_id": "557058:5b636254-9e7a-4894-8f0c-f65c18730042"
+		},
+		"team": {
+			"username": "pandero",
+			"display_name": "Pandero",
+			"type": "team",
+			"uuid": "{554b4841-67e7-4464-867c-72a24c00cce5}",
+			"links": {
+				"self": {
+					"href": "https://api.bitbucket.org/2.0/teams/%7B554b4841-67e7-4464-867c-72a24c00cce5%7D"
+				},
+				"html": {
+					"href": "https://bitbucket.org/%7B554b4841-67e7-4464-867c-72a24c00cce5%7D/"
+				},
+				"avatar": {
+					"href": "https://bitbucket.org/account/pandero/avatar/"
+				}
+			}
+		}
+	}, {
+		"permission": "admin",
+		"type": "team_permission",
+		"user": {
+			"display_name": "rmaqueda",
+			"uuid": "{b17dfb37-4bbd-4f5a-8d23-fd67b771f2b6}",
+			"links": {
+				"self": {
+					"href": "https://api.bitbucket.org/2.0/users/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D"
+				},
+				"html": {
+					"href": "https://bitbucket.org/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D/"
+				},
+				"avatar": {
+					"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:5b636254-9e7a-4894-8f0c-f65c18730042/8fe34e79-b035-433d-a067-511bcc63ef11/128"
+				}
+			},
+			"nickname": "rmaqueda",
+			"type": "user",
+			"account_id": "557058:5b636254-9e7a-4894-8f0c-f65c18730042"
+		},
+		"team": {
+			"username": "molestudio",
+			"display_name": "Molestudio",
+			"type": "team",
+			"uuid": "{d1c3435a-40a1-4ad4-83f4-5c9e32b11653}",
+			"links": {
+				"self": {
+					"href": "https://api.bitbucket.org/2.0/teams/%7Bd1c3435a-40a1-4ad4-83f4-5c9e32b11653%7D"
+				},
+				"html": {
+					"href": "https://bitbucket.org/%7Bd1c3435a-40a1-4ad4-83f4-5c9e32b11653%7D/"
+				},
+				"avatar": {
+					"href": "https://bitbucket.org/account/molestudio/avatar/"
+				}
+			}
+		}
+	}],
+	"page": 1,
+	"size": 3
+}

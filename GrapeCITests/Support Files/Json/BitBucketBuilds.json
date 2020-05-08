@@ -1,0 +1,48 @@
+{
+	"key": "GR-rmaqueda",
+	"description": "Build by rmaqueda",
+	"repository": {
+		"links": {
+			"self": {
+				"href": "https://api.bitbucket.org/2.0/repositories/molestudio/sonar"
+			},
+			"html": {
+				"href": "https://bitbucket.org/molestudio/sonar"
+			},
+			"avatar": {
+				"href": "https://bytebucket.org/ravatar/%7B5f9d1fb9-76ef-4e69-b50e-3c39203d5829%7D?ts=default"
+			}
+		},
+		"type": "repository",
+		"name": "sonar",
+		"full_name": "molestudio/sonar",
+		"uuid": "{5f9d1fb9-76ef-4e69-b50e-3c39203d5829}"
+	},
+	"url": "https://bitbucket.org/molestudio/sonar",
+	"links": {
+		"commit": {
+			"href": "https://api.bitbucket.org/2.0/repositories/molestudio/sonar/commit/70c427cd01670f72b3cdf79db82f9489c0677494"
+		},
+		"self": {
+			"href": "https://api.bitbucket.org/2.0/repositories/molestudio/sonar/commit/70c427cd01670f72b3cdf79db82f9489c0677494/statuses/build/GR-rmaqueda"
+		}
+	},
+	"refname": null,
+	"state": "SUCCESSFUL",
+	"created_on": "2020-04-12T15:20:52.022688+00:00",
+	"commit": {
+		"hash": "70c427cd01670f72b3cdf79db82f9489c0677494",
+		"type": "commit",
+		"links": {
+			"self": {
+				"href": "https://api.bitbucket.org/2.0/repositories/molestudio/sonar/commit/70c427cd01670f72b3cdf79db82f9489c0677494"
+			},
+			"html": {
+				"href": "https://bitbucket.org/molestudio/sonar/commits/70c427cd01670f72b3cdf79db82f9489c0677494"
+			}
+		}
+	},
+	"updated_on": "2020-04-12T15:20:52.022715+00:00",
+	"type": "build",
+	"name": "GrapeCI"
+}

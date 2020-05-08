@@ -1,0 +1,259 @@
+{
+	"sha": "8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+	"node_id": "MDY6Q29tbWl0MjQ5NjgwMjQ0OjhjY2IxOGY2MWIxZmQ1Y2Q0NGNmNjlmODZhNjBjMDY5MmU2MmVmYTg=",
+	"commit": {
+		"author": {
+			"name": "Ricardo Maqueda",
+			"email": "rinconestolmo@gmail.com",
+			"date": "2020-04-10T11:35:16Z"
+		},
+		"committer": {
+			"name": "Ricardo Maqueda",
+			"email": "rinconestolmo@gmail.com",
+			"date": "2020-04-10T11:35:16Z"
+		},
+		"message": "Work in progress refresh repositories",
+		"tree": {
+			"sha": "3cb886bb4991067434ad2dc6769a1eb91ec3dfda",
+			"url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/git/trees/3cb886bb4991067434ad2dc6769a1eb91ec3dfda"
+		},
+		"url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/git/commits/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"comment_count": 0,
+		"verification": {
+			"verified": false,
+			"reason": "unsigned",
+			"signature": null,
+			"payload": null
+		}
+	},
+	"url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/commits/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+	"html_url": "https://github.com/rmaqueda/GrapeCIClean/commit/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+	"comments_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/commits/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/comments",
+	"author": {
+		"login": "rmaqueda",
+		"id": 2968375,
+		"node_id": "MDQ6VXNlcjI5NjgzNzU=",
+		"avatar_url": "https://avatars2.githubusercontent.com/u/2968375?v=4",
+		"gravatar_id": "",
+		"url": "https://api.github.com/users/rmaqueda",
+		"html_url": "https://github.com/rmaqueda",
+		"followers_url": "https://api.github.com/users/rmaqueda/followers",
+		"following_url": "https://api.github.com/users/rmaqueda/following{/other_user}",
+		"gists_url": "https://api.github.com/users/rmaqueda/gists{/gist_id}",
+		"starred_url": "https://api.github.com/users/rmaqueda/starred{/owner}{/repo}",
+		"subscriptions_url": "https://api.github.com/users/rmaqueda/subscriptions",
+		"organizations_url": "https://api.github.com/users/rmaqueda/orgs",
+		"repos_url": "https://api.github.com/users/rmaqueda/repos",
+		"events_url": "https://api.github.com/users/rmaqueda/events{/privacy}",
+		"received_events_url": "https://api.github.com/users/rmaqueda/received_events",
+		"type": "User",
+		"site_admin": false
+	},
+	"committer": {
+		"login": "rmaqueda",
+		"id": 2968375,
+		"node_id": "MDQ6VXNlcjI5NjgzNzU=",
+		"avatar_url": "https://avatars2.githubusercontent.com/u/2968375?v=4",
+		"gravatar_id": "",
+		"url": "https://api.github.com/users/rmaqueda",
+		"html_url": "https://github.com/rmaqueda",
+		"followers_url": "https://api.github.com/users/rmaqueda/followers",
+		"following_url": "https://api.github.com/users/rmaqueda/following{/other_user}",
+		"gists_url": "https://api.github.com/users/rmaqueda/gists{/gist_id}",
+		"starred_url": "https://api.github.com/users/rmaqueda/starred{/owner}{/repo}",
+		"subscriptions_url": "https://api.github.com/users/rmaqueda/subscriptions",
+		"organizations_url": "https://api.github.com/users/rmaqueda/orgs",
+		"repos_url": "https://api.github.com/users/rmaqueda/repos",
+		"events_url": "https://api.github.com/users/rmaqueda/events{/privacy}",
+		"received_events_url": "https://api.github.com/users/rmaqueda/received_events",
+		"type": "User",
+		"site_admin": false
+	},
+	"parents": [{
+		"sha": "45c022457af4a38c8b7cb505f02fa6acf900f7a7",
+		"url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/commits/45c022457af4a38c8b7cb505f02fa6acf900f7a7",
+		"html_url": "https://github.com/rmaqueda/GrapeCIClean/commit/45c022457af4a38c8b7cb505f02fa6acf900f7a7"
+	}],
+	"stats": {
+		"total": 252,
+		"additions": 154,
+		"deletions": 98
+	},
+	"files": [{
+		"sha": "900d236ea33a12ddf9f71a200ae96acd0467ffed",
+		"filename": "GrapeCI/AppDelegate.swift",
+		"status": "modified",
+		"additions": 1,
+		"deletions": 0,
+		"changes": 1,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/AppDelegate.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/AppDelegate.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/AppDelegate.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {\n                           defer: false)\n \n         flowController = FlowController(window: window!)\n+        flowController.authenticate()\n         flowController.loadStatusModule()\n         flowController.loadMenu()\n     }"
+	}, {
+		"sha": "e6d4096fcbe5f8afd86394492e2c9da85d55abb3",
+		"filename": "GrapeCI/Core/CoreProtocol.swift",
+		"status": "modified",
+		"additions": 13,
+		"deletions": 13,
+		"changes": 26,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Core/CoreProtocol.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Core/CoreProtocol.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/Core/CoreProtocol.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -12,13 +12,25 @@ import CoreData\n \n // sourcery: autoSpy\n protocol FlowControllerProtocol: AnyObject {\n+    func authenticate()\n     func loadMenu()\n     func loadListModule()\n     func loadIntegrationModule(repository: GitRepository)\n     func didChangeIntegratedRepositories()\n     func loadStatusModule()\n }\n \n+// sourcery: autoSpy\n+protocol GitRepositoryRepositoryProtocol {\n+    func integratedRepositories() -> [GitRepository]\n+\n+    func integrate(repository: GitRepository)\n+    func deIntegrate(repository: GitRepository)\n+\n+    func refreshIntegratedRepositories() -> AnyPublisher<[GitRepository], Error>\n+    func fetchRepositories(nameFilter: String) -> AnyPublisher<[GitRepository], Error>\n+}\n+\n protocol CoreDataProtocol {\n     var viewContext: NSManagedObjectContext { get }\n }\n@@ -29,6 +41,7 @@ protocol GitHubProviderProtocol {\n \n     func repository(identifier: String) -> AnyPublisher<GitHubRepository, Error>\n     func repositories(nameFilter: String) -> AnyPublisher<GitHubPaginated<GitHubRepository>, Error>\n+    func pullRequests(repository: GitHubRepository) -> AnyPublisher<GitHubRepository, Error>\n }\n \n protocol BitBucketProviderProtocol {\n@@ -38,16 +51,3 @@ protocol BitBucketProviderProtocol {\n     func repository(identifier: String, workspaceID: String) -> AnyPublisher<BitBucketRepository, Error>\n     func repositories(nameFilter: String) -> AnyPublisher<BitBucketPaginated<BitBucketRepository>, Error>\n }\n-\n-// sourcery: autoSpy\n-protocol GitRepositoryRepositoryProtocol {\n-    func integratedRepositories() -> [GitRepository]\n-\n-    func integrate(repository: GitRepository)\n-    func deIntegrate(repository: GitRepository)\n-\n-    func refreshIntegratedRepositories() -> AnyPublisher<[GitRepository], Error>\n-    func fetchRepositories(nameFilter: String) -> AnyPublisher<[GitRepository], Error>\n-}\n-\n-"
+	}, {
+		"sha": "ec83b01fdcd3def14d30ec94363e3f0ec9f91982",
+		"filename": "GrapeCI/Core/GitRepositoryRepository.swift",
+		"status": "modified",
+		"additions": 46,
+		"deletions": 34,
+		"changes": 80,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Core/GitRepositoryRepository.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Core/GitRepositoryRepository.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/Core/GitRepositoryRepository.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -27,14 +27,14 @@ class GitRepositoryRepository: GitRepositoryRepositoryProtocol {\n \n     func startNetworkMonitor() {\n         networkMonitor.start(queue: DispatchQueue(label: \"es.moletudio.network.monitor\"))\n-        networkMonitor.pathUpdateHandler = { path in\n+        networkMonitor.pathUpdateHandler = { [weak self] path in\n             switch path.status {\n             case .satisfied:\n-                if self.bitBucket.user == nil {\n-                    self.bitBucket.authorize()\n+                if self?.bitBucket.user == nil {\n+                    self?.bitBucket.authorize()\n                 }\n-                if self.gitHub.user == nil {\n-                    self.gitHub.authorize()\n+                if self?.gitHub.user == nil {\n+                    self?.gitHub.authorize()\n                 }\n             default:\n                 break\n@@ -51,20 +51,19 @@ class GitRepositoryRepository: GitRepositoryRepositoryProtocol {\n             GitRepository(identifier: $0.identifier,\n                           name: $0.name,\n                           provider: GitProvider(rawValue: $0.providerName)!,\n+                          defaultBranch: Branch(name: $0.defaultBranch),\n                           pipeline: $0.pipeline)\n         }\n     }\n \n     func integrate(repository: GitRepository) {\n-        guard let pipeline = repository.pipeline else {\n-            // TODO: error\n-            return\n-        }\n+        precondition(repository.pipeline != nil, \"The pipeline must not be empty\")\n+\n         let query: NSFetchRequest<IntegratedRepository> = IntegratedRepository.fetchRequest()\n         query.predicate = NSPredicate(format: \"identifier==%@\", repository.identifier)\n \n         if let integratedRepo = try? coreData.viewContext.fetch(query).first {\n-            integratedRepo.pipeline = pipeline\n+            integratedRepo.pipeline = repository.pipeline!\n         } else {\n             if let integratedRepo = NSEntityDescription.insertNewObject(forEntityName: \"IntegratedRepository\",\n                                                                         into: coreData.viewContext) as? IntegratedRepository {\n@@ -91,14 +90,18 @@ class GitRepositoryRepository: GitRepositoryRepositoryProtocol {\n     }\n \n     func refreshIntegratedRepositories() -> AnyPublisher<[GitRepository], Error> {\n-        // TODO: implement\n         let integratedRepos = integratedRepositories()\n-        return gitHub.repository(identifier: integratedRepos.first!.identifier)\n+        guard let repo = integratedRepos.first else {\n+            return Empty(completeImmediately: true).eraseToAnyPublisher()\n+        }\n+\n+        return gitHub.repository(identifier: repo.identifier)\n+            .flatMap(gitHub.pullRequests(repository:))\n             .map {\n                 [GitRepository(identifier: String($0.id),\n                                name: $0.name,\n                                provider: .gitHub,\n-                               defaultBranch: Branch(name: $0.defaultBranch, lastCommit: nil))]\n+                               defaultBranch: Branch(name: $0.defaultBranch))]\n             }\n             .eraseToAnyPublisher()\n     }\n@@ -113,34 +116,43 @@ class GitRepositoryRepository: GitRepositoryRepositoryProtocol {\n \n     private func megerRepositories(bitBucketRepos: BitBucketPaginated<BitBucketRepository>,\n                                    gitHubRepos: GitHubPaginated<GitHubRepository>) -> [GitRepository] {\n-        let integrated = integratedRepositories()\n         var total: [GitRepository] = []\n \n-        bitBucketRepos.items.forEach { repoRaw in\n-            let identifier = repoRaw.uuid\n-            let integratedRepo = integrated.filter({ $0.identifier == identifier }).first\n-\n-            let repo = GitRepository(identifier: identifier,\n-                                     name: repoRaw.name,\n-                                     provider: .bitBucket,\n-                                     defaultBranch: Branch(name: repoRaw.mainBranch?.name ?? \"master\", lastCommit: nil) ,\n-                                     pipeline: integratedRepo?.pipeline)\n-            total.append(repo)\n+        bitBucketRepos.items.forEach { repo in\n+            total.append(repositoryFor(bitBucketRepository: repo))\n         }\n \n-        gitHubRepos.items.forEach { repoRaw in\n-            let identifier = String(repoRaw.id)\n-            let integratedRepo = integrated.filter({ $0.identifier == identifier }).first\n-\n-            let repo = GitRepository(identifier: identifier,\n-                                     name: repoRaw.name,\n-                                     provider: .gitHub,\n-                                     defaultBranch: Branch(name: repoRaw.defaultBranch, lastCommit: nil),\n-                                     pipeline: integratedRepo?.pipeline)\n-            total.append(repo)\n+        gitHubRepos.items.forEach { repo in\n+            total.append(repositoryFor(githubRepository: repo))\n         }\n \n         return total\n     }\n \n+    private func repositoryFor(githubRepository: GitHubRepository) -> GitRepository {\n+        let integrated = integratedRepositories()\n+        let identifier = String(githubRepository.id)\n+        let integratedRepo = integrated.filter({ $0.identifier == identifier }).first\n+\n+        return GitRepository(identifier: identifier,\n+                             name: githubRepository.name,\n+                             provider: .gitHub,\n+                             defaultBranch: Branch(name: githubRepository.defaultBranch),\n+                             pipeline: integratedRepo?.pipeline)\n+    }\n+\n+    private func repositoryFor(bitBucketRepository: BitBucketRepository) -> GitRepository {\n+        let integrated = integratedRepositories()\n+        let identifier = bitBucketRepository.uuid\n+        let integratedRepo = integrated.filter({ $0.identifier == identifier }).first\n+\n+        return GitRepository(identifier: identifier,\n+                             name: bitBucketRepository.name,\n+                             provider: .bitBucket,\n+                             defaultBranch: Branch(name: bitBucketRepository.mainBranch?.name ?? \"master\"),\n+                             workspaceID: bitBucketRepository.owner.uuid,\n+                             pipeline: integratedRepo?.pipeline)\n+    }\n+\n+\n }"
+	}, {
+		"sha": "5d10a91cd36c77b3f30e8f3028f722478cf7bee4",
+		"filename": "GrapeCI/Core/Service/GitHub.swift",
+		"status": "modified",
+		"additions": 10,
+		"deletions": 9,
+		"changes": 19,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Core/Service/GitHub.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Core/Service/GitHub.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/Core/Service/GitHub.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -148,15 +148,16 @@ class GitHub: OAuth2DataLoader, GitHubProviderProtocol {\n //            .decode(type: GitHubRepository.self, decoder: JSONDecoder())\n //            .eraseToAnyPublisher()\n //    }\n-//\n-//    func pullRequests(repository: Repository) -> Promise<[PullRequest]> {\n-//        let url = baseURL.appendingPathComponent(\"/repos/\\(repository.fullName)/pulls\")\n-//        let req = oauth2.request(forURL: url)\n-//\n-//        return perform(request: req).then { (result: [GitHubPullRequest]) -> [PullRequest] in\n-//            result\n-//        }\n-//    }\n+\n+    func pullRequests(repository: GitHubRepository) -> AnyPublisher<GitHubRepository, Error> {\n+        let url = baseURL.appendingPathComponent(\"/repos/\\(repository.fullName)/pulls\")\n+        let request = oauth2.request(forURL: url)\n+\n+        return oauth2.session.dataTaskPublisher(for: request)\n+            .tryMap { $0.data }\n+            .decode(type: GitHubRepository.self, decoder: JSONDecoder())\n+            .eraseToAnyPublisher()\n+    }\n //\n //    func lastCommit(repository: Repository, branchName: String) -> Promise<Commit> {\n //        let urlString = \"/repos/\\(repository.fullName)/commits/\\(branchName)\""
+	}, {
+		"sha": "b6d5e86982198585c64e8a287da2818610c62df3",
+		"filename": "GrapeCI/FlowController.swift",
+		"status": "modified",
+		"additions": 9,
+		"deletions": 15,
+		"changes": 24,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/FlowController.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/FlowController.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/FlowController.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -31,27 +31,25 @@ class FlowController: FlowControllerProtocol {\n         gitHub = GitHub(session: session)\n         bitBucket = BitBucket(session: session)\n         giRepositoryRepository = GitRepositoryRepository(gitHub: gitHub, bitBucket: bitBucket, coreData: coreData)\n-\n-        authenticate()\n     }\n \n-    private func authenticate() {\n+    func authenticate() {\n         let queue = DispatchQueue(label: \"es.molestudio.GrapeCI.queue\", attributes: .concurrent)\n         let group = DispatchGroup()\n \n         group.enter()\n-        queue.async {\n-            self.gitHub.authorize()\n+        queue.async { [weak self] in\n+            self?.gitHub.authorize()\n         }\n \n-        queue.async {\n-            self.bitBucket.authorize()\n+        queue.async { [weak self] in\n+            self?.bitBucket.authorize()\n         }\n         group.leave()\n \n         group.wait()\n-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {\n-            self.giRepositoryRepository.startNetworkMonitor()\n+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in\n+            self?.giRepositoryRepository.startNetworkMonitor()\n         }\n     }\n \n@@ -66,8 +64,7 @@ class FlowController: FlowControllerProtocol {\n         let presenter = ListPresenter(fetchGitRepositoriesInterator: fetchGitRepositoryInterator)\n         listViewController = ListViewController(presenter: presenter, flowController: self)\n \n-        window.contentViewController = listViewController\n-        window.makeKeyAndOrderFront(nil)\n+        statusViewController?.presentAsSheet(listViewController!)\n     }\n \n     func loadIntegrationModule(repository: GitRepository) {\n@@ -80,10 +77,7 @@ class FlowController: FlowControllerProtocol {\n \n     func didChangeIntegratedRepositories() {\n         integrationViewController?.dismiss(self)\n-\n-        listViewController?.repositoryNameTextField.stringValue = \"\"\n-        listViewController?.presenter.searchText = \"\"\n-        listViewController?.reloadData()\n+        listViewController?.dismiss(self)\n     }\n \n     func loadStatusModule() {"
+	}, {
+		"sha": "c2d54d2577974916d8addee0f7b3ee0020b0b39f",
+		"filename": "GrapeCI/Model/Common/GitRepository.swift",
+		"status": "modified",
+		"additions": 7,
+		"deletions": 2,
+		"changes": 9,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Model/Common/GitRepository.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Model/Common/GitRepository.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/Model/Common/GitRepository.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -8,18 +8,23 @@\n \n import Foundation\n \n-struct GitRepository {\n+struct GitRepository: Equatable {\n     let identifier: String\n     let name: String\n     let provider: GitProvider\n-    var defaultBranch: Branch?\n+    var defaultBranch: Branch\n     var workspaceID: String?\n     var pipeline: String?\n     var pullRequests: [PullRequest]?\n \n     var integrated: Bool {\n         pipeline != nil\n     }\n+\n+    static func == (lhs: GitRepository, rhs: GitRepository) -> Bool {\n+        return lhs.identifier == rhs.identifier &&\n+            lhs.provider == rhs.provider\n+    }\n }\n \n struct PullRequest {"
+	}, {
+		"sha": "bb5a34cf089a0dab00bde8fbf2b6f0141d81ab98",
+		"filename": "GrapeCI/Model/CoreData/IntegratedRepository+CoreDataProperties.swift",
+		"status": "modified",
+		"additions": 1,
+		"deletions": 0,
+		"changes": 1,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Model/CoreData/IntegratedRepository+CoreDataProperties.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Model/CoreData/IntegratedRepository+CoreDataProperties.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/Model/CoreData/IntegratedRepository+CoreDataProperties.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -15,6 +15,7 @@ extension IntegratedRepository {\n     @NSManaged public var identifier: String\n     @NSManaged public var name: String\n     @NSManaged public var providerName: String\n+    @NSManaged public var defaultBranch: String\n     @NSManaged public var workspaceID: String?\n     @NSManaged public var pipeline: String\n "
+	}, {
+		"sha": "9cc4f5e38cdf483ea691a6fb5a443ad3819b354b",
+		"filename": "GrapeCI/Module/Status/Presenter/StatusPresenter.swift",
+		"status": "modified",
+		"additions": 41,
+		"deletions": 21,
+		"changes": 62,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Module/Status/Presenter/StatusPresenter.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCI/Module/Status/Presenter/StatusPresenter.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCI/Module/Status/Presenter/StatusPresenter.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -10,21 +10,21 @@ import Foundation\n import Combine\n \n enum BuildState {\n+    case none\n     case inprogress\n     case success\n     case failed\n-    case unknown\n \n     var iconName: String {\n         switch self {\n+        case .none:\n+            return \"download\"\n         case .inprogress:\n             return \"download\"\n         case .success:\n             return \"success\"\n         case .failed:\n             return \"fail\"\n-        case .unknown:\n-            return \"download\"\n         }\n     }\n }\n@@ -55,26 +55,46 @@ class StatusPresenter: StatusPresenterProtocol {\n         var viewModels: [StatusViewModel] = []\n \n         repositories.forEach { repository in\n-            if  let defaultBranch = repository.defaultBranch,\n-                let builds = defaultBranch.lastCommit?.builds, builds.count > 0 {\n-                let viewModel = StatusViewModel(status: self.buildState(builds: builds),\n-                                                provider: repository.provider,\n-                                                infoText: \"Main branch: \\(defaultBranch)\",\n-                                                repositoryName: repository.name,\n-                                                url: URL(string: repository.name))\n+            if let viewModel = viewModelForDefaultBranch(repository: repository) {\n                 viewModels.append(viewModel)\n             }\n \n-            if let pullRequests = repository.pullRequests, pullRequests.count > 0 {\n-                pullRequests.forEach { pullRequest in\n-                    if let builds = pullRequest.origin.lastCommit?.builds, builds.count > 0 {\n-                        let viewModel = StatusViewModel(status: self.buildState(builds: builds),\n-                                                        provider: repository.provider,\n-                                                        infoText: pullRequest.title,\n-                                                        repositoryName: repository.name,\n-                                                        url: URL(string: pullRequest.link))\n-                        viewModels.append(viewModel)\n-                    }\n+            viewModels.append(contentsOf: viewModelsForPullRequests(repository: repository))\n+        }\n+\n+        return viewModels\n+    }\n+\n+    private func viewModelForDefaultBranch(repository: GitRepository) -> StatusViewModel? {\n+        guard let builds = repository.defaultBranch.lastCommit?.builds,\n+            builds.count > 0 else {\n+                return StatusViewModel(status: .none,\n+                                       provider: repository.provider,\n+                                       infoText: \"Main branch: \" + repository.defaultBranch.name,\n+                                       repositoryName: repository.name,\n+                                       url: URL(string: repository.name))\n+        }\n+\n+        return StatusViewModel(status: self.buildState(builds: builds),\n+                               provider: repository.provider,\n+                               infoText: \"Main branch: \" + repository.defaultBranch.name,\n+                               repositoryName: repository.name,\n+                               url: URL(string: repository.name))\n+\n+    }\n+\n+    private func viewModelsForPullRequests(repository: GitRepository) -> [StatusViewModel] {\n+        var viewModels: [StatusViewModel] = []\n+\n+        if let pullRequests = repository.pullRequests, pullRequests.count > 0 {\n+            pullRequests.forEach { pullRequest in\n+                if let builds = pullRequest.origin.lastCommit?.builds, builds.count > 0 {\n+                    let viewModel = StatusViewModel(status: buildState(builds: builds),\n+                                                    provider: repository.provider,\n+                                                    infoText: pullRequest.title,\n+                                                    repositoryName: repository.name,\n+                                                    url: URL(string: pullRequest.link))\n+                    viewModels.append(viewModel)\n                 }\n             }\n         }\n@@ -92,7 +112,7 @@ class StatusPresenter: StatusPresenterProtocol {\n         if builds.contains(where: { $0.state == .failed}) {\n             return .failed\n         }\n-        return .unknown\n+        return .none\n     }\n \n }"
+	}, {
+		"sha": "e9bbcb2a77d027a43b80361dc2631c149d96da85",
+		"filename": "GrapeCITests/Core/Mock/BitBucketMock.swift",
+		"status": "modified",
+		"additions": 6,
+		"deletions": 0,
+		"changes": 6,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Core/Mock/BitBucketMock.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Core/Mock/BitBucketMock.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/Core/Mock/BitBucketMock.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -35,4 +35,10 @@ class BitBucketMock: BitBucketProviderProtocol {\n         }.eraseToAnyPublisher()\n     }\n \n+    func repository(identifier: String, workspaceID: String) -> AnyPublisher<BitBucketRepository, Error> {\n+        return Future<BitBucketRepository, Error> { promise in\n+        //TODO: Implement\n+        }.eraseToAnyPublisher()\n+    }\n+\n }"
+	}, {
+		"sha": "7b4f32593edfb3e215d8bf04a9b39306f8cc2472",
+		"filename": "GrapeCITests/Core/Mock/GitHubMock.swift",
+		"status": "modified",
+		"additions": 6,
+		"deletions": 0,
+		"changes": 6,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Core/Mock/GitHubMock.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Core/Mock/GitHubMock.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/Core/Mock/GitHubMock.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -35,4 +35,10 @@ class GitHubMock: GitHubProviderProtocol {\n         }.eraseToAnyPublisher()\n     }\n \n+    func repository(identifier: String) -> AnyPublisher<GitHubRepository, Error> {\n+        return Future<GitHubRepository, Error> { promise in\n+        //TODO: Implement\n+        }.eraseToAnyPublisher()\n+    }\n+\n }"
+	}, {
+		"sha": "29159a5164f3e17f04ef07697a47c7175df9f34a",
+		"filename": "GrapeCITests/Module/Integrate/Domain/IntegrateInteractorTests.swift",
+		"status": "modified",
+		"additions": 1,
+		"deletions": 1,
+		"changes": 2,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/Integrate/Domain/IntegrateInteractorTests.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/Integrate/Domain/IntegrateInteractorTests.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/Module/Integrate/Domain/IntegrateInteractorTests.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -15,7 +15,7 @@ class IntegrateInteractorTests: XCTestCase {\n     let repository = GitRepository(identifier: \"id\",\n                                    name: \"name\",\n                                    provider: .gitHub,\n-                                   defaultBranch: \"master\",\n+                                   defaultBranch: Branch(name: \"master\"),\n                                    pipeline: nil)\n \n     override func setUpWithError() throws {"
+	}, {
+		"sha": "e45744e6b8d35f5f7d81aa58e7cea573574b5cfd",
+		"filename": "GrapeCITests/Module/Integrate/Presenter/IntegratePresenterTests.swift",
+		"status": "modified",
+		"additions": 1,
+		"deletions": 1,
+		"changes": 2,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/Integrate/Presenter/IntegratePresenterTests.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/Integrate/Presenter/IntegratePresenterTests.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/Module/Integrate/Presenter/IntegratePresenterTests.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -15,7 +15,7 @@ class IntegratePresenterTests: XCTestCase {\n     var repository = GitRepository(identifier: \"id\",\n                                    name: \"name\",\n                                    provider: .gitHub,\n-                                   defaultBranch: \"master\",\n+                                   defaultBranch: Branch(name: \"master\"),\n                                    pipeline: nil)\n \n     override func setUpWithError() throws {"
+	}, {
+		"sha": "4a36ad131223fe1fdc2e04060ab45fed62cc5f81",
+		"filename": "GrapeCITests/Module/List/Domain/FetchGitRepositoriesInteractorTests.swift",
+		"status": "modified",
+		"additions": 1,
+		"deletions": 1,
+		"changes": 2,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/List/Domain/FetchGitRepositoriesInteractorTests.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/List/Domain/FetchGitRepositoriesInteractorTests.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/Module/List/Domain/FetchGitRepositoriesInteractorTests.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -30,7 +30,7 @@ class FetchGitRepositoriesInteractorTests: XCTestCase {\n         // WHEN:  fetchRepositories\n         // THEN:  check the response match\n \n-        let repo = GitRepository(identifier: \"123\", name: \"stub\", provider: .gitHub, defaultBranch: \"master\")\n+        let repo = GitRepository(identifier: \"123\", name: \"stub\", provider: .gitHub, defaultBranch: Branch(name: \"master\"))\n         repository.result = [repo]\n         let exp = expectation(description: \"\")\n         let subcription = sut.fetchRepositories(nameFilter: \"stub\")"
+	}, {
+		"sha": "814998deeb8b80be5aca3a9610fc842816c27e8a",
+		"filename": "GrapeCITests/Module/List/Mock/GitRepositoryRepositoryMock.swift",
+		"status": "modified",
+		"additions": 6,
+		"deletions": 0,
+		"changes": 6,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/List/Mock/GitRepositoryRepositoryMock.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/List/Mock/GitRepositoryRepositoryMock.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/Module/List/Mock/GitRepositoryRepositoryMock.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -38,5 +38,11 @@ class GitRepositoryRepositoryMock: GitRepositoryRepositoryProtocol {\n     func deIntegrate(repository: GitRepository) {\n \n     }\n+\n+    func refreshIntegratedRepositories() -> AnyPublisher<[GitRepository], Error> {\n+        return Future<[GitRepository], Error> { promise in\n+        //TODO: Implement\n+        }.eraseToAnyPublisher()\n+    }\n     \n }"
+	}, {
+		"sha": "00d60c04ecf805430eae8ceeb17ca204489047a7",
+		"filename": "GrapeCITests/Module/List/View/ListViewControllerTests.swift",
+		"status": "modified",
+		"additions": 1,
+		"deletions": 1,
+		"changes": 2,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/List/View/ListViewControllerTests.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/Module/List/View/ListViewControllerTests.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/Module/List/View/ListViewControllerTests.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -18,7 +18,7 @@ class ListViewControllerTests: XCTestView {\n     let repo = GitRepository(identifier: \"stub\",\n                              name: \"name\",\n                              provider: .gitHub,\n-                             defaultBranch: \"master\")\n+                             defaultBranch: Branch(name: \"master\"))\n \n     override func setUpWithError() throws {\n         try super.setUpWithError()"
+	}, {
+		"sha": "f28c22463d92dcb95153c3cb35d08217e2a66735",
+		"filename": "GrapeCITests/SpyObjects/AutoSpy.generated.swift",
+		"status": "modified",
+		"additions": 4,
+		"deletions": 0,
+		"changes": 4,
+		"blob_url": "https://github.com/rmaqueda/GrapeCIClean/blob/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/SpyObjects/AutoSpy.generated.swift",
+		"raw_url": "https://github.com/rmaqueda/GrapeCIClean/raw/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8/GrapeCITests/SpyObjects/AutoSpy.generated.swift",
+		"contents_url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/contents/GrapeCITests/SpyObjects/AutoSpy.generated.swift?ref=8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+		"patch": "@@ -21,6 +21,7 @@ import Combine\n // Spy for FlowControllerProtocol\n public class SpyFlowControllerProtocol: FlowControllerProtocol, TestSpy {\n \tpublic enum Method: Equatable {\n+        case authenticate\n         case loadMenu\n         case loadListModule\n         case loadIntegrationModule(repository: GitRepository)\n@@ -33,6 +34,9 @@ public class SpyFlowControllerProtocol: FlowControllerProtocol, TestSpy {\n \n     public init() {}\n \n+    public func authenticate() {\n+        callstack.record(.authenticate)\n+    }\n     public func loadMenu() {\n         callstack.record(.loadMenu)\n     }"
+	}]
+}

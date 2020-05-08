@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BuildLog" representedClassName=".BuildLog" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <attribute name="log" optional="YES" attributeType="String"/>
+        <attribute name="providerName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="IntegratedRepository" representedClassName=".IntegratedRepository" syncable="YES">
+        <attribute name="defaultBranch" attributeType="String"/>
+        <attribute name="fullName" attributeType="String"/>
+        <attribute name="identifier" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="pipeline" attributeType="String"/>
+        <attribute name="providerName" attributeType="String"/>
+        <attribute name="workspaceID" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LoggedProvider" representedClassName=".LoggedProvider" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="BuildLog" positionX="-405" positionY="27" width="128" height="88"/>
+        <element name="IntegratedRepository" positionX="-401.86328125" positionY="-22.89453125" width="128" height="148"/>
+        <element name="LoggedProvider" positionX="-405" positionY="27" width="128" height="58"/>
+    </elements>
+</model>

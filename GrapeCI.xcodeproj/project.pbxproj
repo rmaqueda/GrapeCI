@@ -1,0 +1,1385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74040016245C09BA00750345 /* ClosableWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74040015245C09BA00750345 /* ClosableWindow.swift */; };
+		74267B29245D45D80060D2F8 /* GitHubAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B28245D45D80060D2F8 /* GitHubAdapter.swift */; };
+		74267B2B245D4C4E0060D2F8 /* BitBucketAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B2A245D4C4E0060D2F8 /* BitBucketAdapter.swift */; };
+		74267B2D245D5FA70060D2F8 /* GitHubTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B2C245D5FA70060D2F8 /* GitHubTransformer.swift */; };
+		74267B2F245D5FE80060D2F8 /* BitBucketTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B2E245D5FE80060D2F8 /* BitBucketTransformer.swift */; };
+		74267B31245D604D0060D2F8 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B30245D604D0060D2F8 /* GitHubRequest.swift */; };
+		74267B33245D609E0060D2F8 /* BitBucketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B32245D609E0060D2F8 /* BitBucketRequest.swift */; };
+		74267B38245DF02E0060D2F8 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B37245DF02E0060D2F8 /* Secret.swift */; };
+		74267B3C245DF5AC0060D2F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B3B245DF5AC0060D2F8 /* Constants.swift */; };
+		74267B47245E92A90060D2F8 /* ZipCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74267B46245E92A90060D2F8 /* ZipCollection.swift */; };
+		743201A32457146C00EEDE54 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743201A22457146C00EEDE54 /* WelcomeView.swift */; };
+		743201A5245719A000EEDE54 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743201A4245719A000EEDE54 /* WelcomePresenter.swift */; };
+		743201C9245724E400EEDE54 /* FetchUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743201C8245724E400EEDE54 /* FetchUserInteractor.swift */; };
+		743201CB2457FC5C00EEDE54 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743201CA2457FC5C00EEDE54 /* GitHubUser.swift */; };
+		7496C3E2246513CD00990BEB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496C3E1246513CD00990BEB /* Alert.swift */; };
+		7496C3E42465156700990BEB /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496C3E32465156700990BEB /* NSButton.swift */; };
+		74BDAF66246167400007E63E /* LoggedProvider+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDAF64246167400007E63E /* LoggedProvider+CoreDataClass.swift */; };
+		74BDAF67246167400007E63E /* LoggedProvider+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDAF65246167400007E63E /* LoggedProvider+CoreDataProperties.swift */; };
+		74FADBC7245BD7050011AFF7 /* OAuth2DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FADBC6245BD7050011AFF7 /* OAuth2DataLoader.swift */; };
+		74FADBCC245BDA230011AFF7 /* OAuth2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C26C28424286E33003BFADE /* OAuth2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C0458B22440305C00CB8F6B /* AutoSpy.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0458B02440301200CB8F6B /* AutoSpy.generated.swift */; };
+		8C0458BC2440432B00CB8F6B /* IntegratePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0458BB2440432B00CB8F6B /* IntegratePresenterTests.swift */; };
+		8C0458BF2440472900CB8F6B /* IntegrateInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0458BE2440472900CB8F6B /* IntegrateInteractorTests.swift */; };
+		8C17AB152440730500D8B85A /* StatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C17AB142440730500D8B85A /* StatusViewController.xib */; };
+		8C17AB182440927F00D8B85A /* GitHubPullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17AB172440927F00D8B85A /* GitHubPullRequest.swift */; };
+		8C1C687A2427D47F008C6176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68792427D47F008C6176 /* AppDelegate.swift */; };
+		8C1C687E2427D481008C6176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C687D2427D481008C6176 /* Assets.xcassets */; };
+		8C1C68A12427D653008C6176 /* StatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68A02427D653008C6176 /* StatusPresenter.swift */; };
+		8C1C68A42427D6AB008C6176 /* RefreshGitRepositoryInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68A32427D6AB008C6176 /* RefreshGitRepositoryInterator.swift */; };
+		8C1C68A72427D72F008C6176 /* GitProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68A62427D72F008C6176 /* GitProvider.swift */; };
+		8C1C68B42427DA7D008C6176 /* Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C68B32427DA7D008C6176 /* Menu.xib */; };
+		8C1C68B92427DF5A008C6176 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68AC2427D998008C6176 /* main.swift */; };
+		8C1C68BC24286982008C6176 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68BB24286982008C6176 /* GitRepository.swift */; };
+		8C1C68BF242869CE008C6176 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68BE242869CE008C6176 /* Provider.swift */; };
+		8C1C68C224286C61008C6176 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C68C024286C61008C6176 /* GitHub.swift */; };
+		8C26C28924286EB5003BFADE /* GitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26C28824286EB5003BFADE /* GitUser.swift */; };
+		8C26C28B24286EE6003BFADE /* BitBucketTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26C28A24286EE6003BFADE /* BitBucketTeam.swift */; };
+		8C389584243AE3CF005DFDB1 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C389583243AE3CF005DFDB1 /* URLProtocolMock.swift */; };
+		8C389587243AE5DB005DFDB1 /* URLResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C389586243AE5DB005DFDB1 /* URLResponseMock.swift */; };
+		8C3895A2243AFF09005DFDB1 /* TestSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3895A0243AFF09005DFDB1 /* TestSpy.swift */; };
+		8C3895A4243AFF09005DFDB1 /* CallstackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3895A1243AFF09005DFDB1 /* CallstackContainer.swift */; };
+		8C3895AE243AFF75005DFDB1 /* CallstackMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3895AC243AFF74005DFDB1 /* CallstackMatcher.swift */; };
+		8C3895B0243AFF75005DFDB1 /* CallstackPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3895AD243AFF75005DFDB1 /* CallstackPredicate.swift */; };
+		8C4355AC244EBC1700F92739 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4355AB244EBC1700F92739 /* AppIcon.swift */; };
+		8C562124243DE927004A8C0E /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C562123243DE927004A8C0E /* Collection.swift */; };
+		8C7EDD4924371AD2000991BD /* BitBucketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EDD4824371AD2000991BD /* BitBucketError.swift */; };
+		8C7EDD4B24379F81000991BD /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EDD4A24379F81000991BD /* XCTestCase.swift */; };
+		8C7EDD5724387BD3000991BD /* FetchGitRepositoriesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EDD5624387BD3000991BD /* FetchGitRepositoriesInteractorTests.swift */; };
+		8C85A7C0244D711800C97E1B /* BuilderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85A7BD244D711800C97E1B /* BuilderController.swift */; };
+		8C85A7C1244D711800C97E1B /* PipeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85A7BE244D711800C97E1B /* PipeLine.swift */; };
+		8C85A7C2244D711800C97E1B /* ShellCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85A7BF244D711800C97E1B /* ShellCommand.swift */; };
+		8C85A7C5244D7CC900C97E1B /* SchedulerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85A7C4244D7CC900C97E1B /* SchedulerController.swift */; };
+		8C8B6C3C24532EAD0003833D /* BuildLog+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B6C3A24532EAD0003833D /* BuildLog+CoreDataClass.swift */; };
+		8C8B6C3D24532EAD0003833D /* BuildLog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B6C3B24532EAD0003833D /* BuildLog+CoreDataProperties.swift */; };
+		8C8B6C422453390C0003833D /* ShowLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B6C402453390C0003833D /* ShowLogViewController.swift */; };
+		8C8B6C432453390C0003833D /* ShowLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B6C412453390C0003833D /* ShowLogViewController.xib */; };
+		8C8CF6BA242B39F300A8B0C9 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CF6B9242B39F300A8B0C9 /* ListPresenter.swift */; };
+		8C8CF6BE242B3D6F00A8B0C9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CF6BC242B3D6F00A8B0C9 /* ListViewController.swift */; };
+		8C8CF6BF242B3D6F00A8B0C9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8CF6BD242B3D6F00A8B0C9 /* ListViewController.xib */; };
+		8C8CF6C1242B498200A8B0C9 /* FetchGitRepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CF6C0242B498200A8B0C9 /* FetchGitRepositoriesInteractor.swift */; };
+		8CAD2FB124404B9000969D76 /* StatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2FB024404B9000969D76 /* StatusProtocol.swift */; };
+		8CAD2FB42440522000969D76 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2FB22440522000969D76 /* StatusViewController.swift */; };
+		8CB554892442E53E00E21E50 /* GitHubBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB554882442E53E00E21E50 /* GitHubBuild.swift */; };
+		8CB9BF8824307103002EC8D2 /* BitBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF8724307103002EC8D2 /* BitBucket.swift */; };
+		8CB9BF8B243073D7002EC8D2 /* BitBucketPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF8A243073D7002EC8D2 /* BitBucketPaginated.swift */; };
+		8CB9BF8D243073EA002EC8D2 /* GitHubPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF8C243073EA002EC8D2 /* GitHubPaginated.swift */; };
+		8CB9BF8F24307882002EC8D2 /* BitBucketUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF8E24307882002EC8D2 /* BitBucketUser.swift */; };
+		8CB9BF9124307903002EC8D2 /* BitBucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF9024307903002EC8D2 /* BitBucketRepository.swift */; };
+		8CB9BF9C24331241002EC8D2 /* XCTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF9B24331241002EC8D2 /* XCTestView.swift */; };
+		8CB9BFA124332474002EC8D2 /* ListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BFA024332474002EC8D2 /* ListPresenterTests.swift */; };
+		8CC85A7524399898007FF1A0 /* GitHubError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC85A7424399898007FF1A0 /* GitHubError.swift */; };
+		8CCBE07924440D3300D09D87 /* BitBucketBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE07824440D3300D09D87 /* BitBucketBuild.swift */; };
+		8CCBE07B24440DE100D09D87 /* BitBucketCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE07A24440DE100D09D87 /* BitBucketCommit.swift */; };
+		8CCBE07D24440E8600D09D87 /* GitHubCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE07C24440E8600D09D87 /* GitHubCommit.swift */; };
+		8CCBE07F244411F400D09D87 /* GitPullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE07E244411F400D09D87 /* GitPullRequest.swift */; };
+		8CCBE0812444121900D09D87 /* GitBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE0802444121900D09D87 /* GitBranch.swift */; };
+		8CCBE0832444122D00D09D87 /* GitCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE0822444122D00D09D87 /* GitCommit.swift */; };
+		8CCBE0852444123F00D09D87 /* GitBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE0842444123F00D09D87 /* GitBuild.swift */; };
+		8CCBE08724441A6500D09D87 /* BitBucketPullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCBE08624441A6500D09D87 /* BitBucketPullRequest.swift */; };
+		8CDE7A98243B76810087F61F /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE7A97243B76810087F61F /* FlowController.swift */; };
+		8CDE7A9E243B822F0087F61F /* IntegrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE7A9C243B822F0087F61F /* IntegrateViewController.swift */; };
+		8CDE7A9F243B822F0087F61F /* IntegrateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDE7A9D243B822F0087F61F /* IntegrateViewController.xib */; };
+		8CDE7AA1243B82750087F61F /* IntegratePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE7AA0243B82750087F61F /* IntegratePresenter.swift */; };
+		8CDE7AA3243B82B50087F61F /* IntegrateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE7AA2243B82B50087F61F /* IntegrateProtocol.swift */; };
+		8CDE7AA5243B83EC0087F61F /* IntegrateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE7AA4243B83EC0087F61F /* IntegrateInteractor.swift */; };
+		8CE1898C243464AE001AA28C /* ListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1898B243464AE001AA28C /* ListProtocol.swift */; };
+		8CE1CC7024500E97003E6435 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1CC6F24500E97003E6435 /* NSImage.swift */; };
+		8CEE2C4724288209006333DA /* GitHubrepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C4624288209006333DA /* GitHubrepository.swift */; };
+		8CEE2C4A242882F9006333DA /* GitHubOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C49242882F9006333DA /* GitHubOwner.swift */; };
+		8CEE2C4D2428832C006333DA /* GitHubPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C4C2428832C006333DA /* GitHubPermissions.swift */; };
+		8CEE2C522428A9EB006333DA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C512428A9EB006333DA /* CoreDataStack.swift */; };
+		8CEE2C542428AA83006333DA /* GrapeCI.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C532428AA82006333DA /* GrapeCI.xcdatamodel */; };
+		8CEE2C582428B306006333DA /* IntegratedRepository+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C562428B306006333DA /* IntegratedRepository+CoreDataClass.swift */; };
+		8CEE2C592428B306006333DA /* IntegratedRepository+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C572428B306006333DA /* IntegratedRepository+CoreDataProperties.swift */; };
+		8CFD6B7424388BB4005ECB3D /* GitProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD6B7324388BB4005ECB3D /* GitProviderTests.swift */; };
+		8CFD6B7624388C27005ECB3D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD6B7524388C27005ECB3D /* NetworkError.swift */; };
+		8CFD6B782438E5BD005ECB3D /* CoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD6B772438E5BD005ECB3D /* CoreProtocol.swift */; };
+		8CFD6B7B2438E74F005ECB3D /* GitHubMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD6B7A2438E74F005ECB3D /* GitHubMock.swift */; };
+		8CFD6B7D2438E811005ECB3D /* BitBucketMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD6B7C2438E811005ECB3D /* BitBucketMock.swift */; };
+		8CFD6B7F2438E85F005ECB3D /* CoreDataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD6B7E2438E85F005ECB3D /* CoreDataMock.swift */; };
+		8CFD6B802438E99D005ECB3D /* GrapeCI.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE2C532428AA82006333DA /* GrapeCI.xcdatamodel */; };
+		8CFD6B912438F51A005ECB3D /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD6B902438F51A005ECB3D /* Json.swift */; };
+		8CFEE0AA2445743B00A7F7FE /* BitBucketBuilds.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B0244369A100156E63 /* BitBucketBuilds.json */; };
+		8CFEE0AB2445743B00A7F7FE /* BitBucketCommits.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5BD244369A200156E63 /* BitBucketCommits.json */; };
+		8CFEE0AC2445743B00A7F7FE /* BitBucketEmptyPaginatedRepositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5BA244369A200156E63 /* BitBucketEmptyPaginatedRepositories.json */; };
+		8CFEE0AD2445743B00A7F7FE /* BitBucketError.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B2244369A100156E63 /* BitBucketError.json */; };
+		8CFEE0AE2445743B00A7F7FE /* BitBucketPaginatedRepositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B7244369A100156E63 /* BitBucketPaginatedRepositories.json */; };
+		8CFEE0AF2445743B00A7F7FE /* BitBucketPullRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B3244369A100156E63 /* BitBucketPullRequest.json */; };
+		8CFEE0B02445743B00A7F7FE /* BitBucketTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B1244369A100156E63 /* BitBucketTeam.json */; };
+		8CFEE0B12445743B00A7F7FE /* BitBucketUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B8244369A100156E63 /* BitBucketUser.json */; };
+		8CFEE0B22445743B00A7F7FE /* GiHubCommits.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B6244369A100156E63 /* GiHubCommits.json */; };
+		8CFEE0B32445743B00A7F7FE /* GitHubBuilds.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B9244369A100156E63 /* GitHubBuilds.json */; };
+		8CFEE0B42445743B00A7F7FE /* GitHubEmptyPaginatedRepositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5BC244369A200156E63 /* GitHubEmptyPaginatedRepositories.json */; };
+		8CFEE0B52445743B00A7F7FE /* GitHubError.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B5244369A100156E63 /* GitHubError.json */; };
+		8CFEE0B62445743B00A7F7FE /* GitHubPaginatedRepositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5AF244369A100156E63 /* GitHubPaginatedRepositories.json */; };
+		8CFEE0B72445743B00A7F7FE /* GitHubPullRequests.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5B4244369A100156E63 /* GitHubPullRequests.json */; };
+		8CFEE0B82445743B00A7F7FE /* GitHubUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0F5BB244369A200156E63 /* GitHubUser.json */; };
+		8CFEE0CC2445818D00A7F7FE /* GitrepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFEE0CA2445816D00A7F7FE /* GitrepositoryMock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C1C68892427D481008C6176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C1C686E2427D47F008C6176 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C1C68752427D47F008C6176;
+			remoteInfo = GrapeCI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74FADBC5245BC4570011AFF7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				74FADBCC245BDA230011AFF7 /* OAuth2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		74040015245C09BA00750345 /* ClosableWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosableWindow.swift; sourceTree = "<group>"; };
+		74267B28245D45D80060D2F8 /* GitHubAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAdapter.swift; sourceTree = "<group>"; };
+		74267B2A245D4C4E0060D2F8 /* BitBucketAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketAdapter.swift; sourceTree = "<group>"; };
+		74267B2C245D5FA70060D2F8 /* GitHubTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTransformer.swift; sourceTree = "<group>"; };
+		74267B2E245D5FE80060D2F8 /* BitBucketTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketTransformer.swift; sourceTree = "<group>"; };
+		74267B30245D604D0060D2F8 /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
+		74267B32245D609E0060D2F8 /* BitBucketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketRequest.swift; sourceTree = "<group>"; };
+		74267B37245DF02E0060D2F8 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		74267B3B245DF5AC0060D2F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74267B46245E92A90060D2F8 /* ZipCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCollection.swift; sourceTree = "<group>"; };
+		743201A22457146C00EEDE54 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		743201A4245719A000EEDE54 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		743201C8245724E400EEDE54 /* FetchUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserInteractor.swift; sourceTree = "<group>"; };
+		743201CA2457FC5C00EEDE54 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		7496C3E1246513CD00990BEB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		7496C3E32465156700990BEB /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
+		74BDAF64246167400007E63E /* LoggedProvider+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedProvider+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74BDAF65246167400007E63E /* LoggedProvider+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedProvider+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74FADBC6245BD7050011AFF7 /* OAuth2DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2DataLoader.swift; sourceTree = "<group>"; };
+		8C0458AC24402BB300CB8F6B /* AutoSpy.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoSpy.stencil; sourceTree = "<group>"; };
+		8C0458B02440301200CB8F6B /* AutoSpy.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSpy.generated.swift; sourceTree = "<group>"; };
+		8C0458BB2440432B00CB8F6B /* IntegratePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratePresenterTests.swift; sourceTree = "<group>"; };
+		8C0458BE2440472900CB8F6B /* IntegrateInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrateInteractorTests.swift; sourceTree = "<group>"; };
+		8C17AB142440730500D8B85A /* StatusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusViewController.xib; sourceTree = "<group>"; };
+		8C17AB172440927F00D8B85A /* GitHubPullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPullRequest.swift; sourceTree = "<group>"; };
+		8C1C68762427D47F008C6176 /* GrapeCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrapeCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1C68792427D47F008C6176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C1C687D2427D481008C6176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C1C68822427D481008C6176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1C68832427D481008C6176 /* GrapeCI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GrapeCI.entitlements; sourceTree = "<group>"; };
+		8C1C68882427D481008C6176 /* GrapeCIUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrapeCIUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1C688E2427D481008C6176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1C68A02427D653008C6176 /* StatusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPresenter.swift; sourceTree = "<group>"; };
+		8C1C68A32427D6AB008C6176 /* RefreshGitRepositoryInterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshGitRepositoryInterator.swift; sourceTree = "<group>"; };
+		8C1C68A62427D72F008C6176 /* GitProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProvider.swift; sourceTree = "<group>"; };
+		8C1C68AC2427D998008C6176 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8C1C68B32427DA7D008C6176 /* Menu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Menu.xib; sourceTree = "<group>"; };
+		8C1C68BB24286982008C6176 /* GitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepository.swift; sourceTree = "<group>"; };
+		8C1C68BE242869CE008C6176 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		8C1C68C024286C61008C6176 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
+		8C26C28424286E33003BFADE /* OAuth2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuth2.framework; path = Carthage/Build/Mac/OAuth2.framework; sourceTree = "<group>"; };
+		8C26C28824286EB5003BFADE /* GitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUser.swift; sourceTree = "<group>"; };
+		8C26C28A24286EE6003BFADE /* BitBucketTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketTeam.swift; sourceTree = "<group>"; };
+		8C389583243AE3CF005DFDB1 /* URLProtocolMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		8C389586243AE5DB005DFDB1 /* URLResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseMock.swift; sourceTree = "<group>"; };
+		8C3895A0243AFF09005DFDB1 /* TestSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSpy.swift; sourceTree = "<group>"; };
+		8C3895A1243AFF09005DFDB1 /* CallstackContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallstackContainer.swift; sourceTree = "<group>"; };
+		8C3895AC243AFF74005DFDB1 /* CallstackMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallstackMatcher.swift; sourceTree = "<group>"; };
+		8C3895AD243AFF75005DFDB1 /* CallstackPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallstackPredicate.swift; sourceTree = "<group>"; };
+		8C4355AB244EBC1700F92739 /* AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		8C562123243DE927004A8C0E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		8C7EDD4824371AD2000991BD /* BitBucketError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketError.swift; sourceTree = "<group>"; };
+		8C7EDD4A24379F81000991BD /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		8C7EDD5624387BD3000991BD /* FetchGitRepositoriesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGitRepositoriesInteractorTests.swift; sourceTree = "<group>"; };
+		8C85A7BD244D711800C97E1B /* BuilderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderController.swift; sourceTree = "<group>"; };
+		8C85A7BE244D711800C97E1B /* PipeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipeLine.swift; sourceTree = "<group>"; };
+		8C85A7BF244D711800C97E1B /* ShellCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellCommand.swift; sourceTree = "<group>"; };
+		8C85A7C4244D7CC900C97E1B /* SchedulerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulerController.swift; sourceTree = "<group>"; };
+		8C8B6C3A24532EAD0003833D /* BuildLog+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildLog+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8C8B6C3B24532EAD0003833D /* BuildLog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildLog+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8C8B6C402453390C0003833D /* ShowLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLogViewController.swift; sourceTree = "<group>"; };
+		8C8B6C412453390C0003833D /* ShowLogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowLogViewController.xib; sourceTree = "<group>"; };
+		8C8CF6B9242B39F300A8B0C9 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		8C8CF6BC242B3D6F00A8B0C9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8C8CF6BD242B3D6F00A8B0C9 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		8C8CF6C0242B498200A8B0C9 /* FetchGitRepositoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGitRepositoriesInteractor.swift; sourceTree = "<group>"; };
+		8CA0F5AF244369A100156E63 /* GitHubPaginatedRepositories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GitHubPaginatedRepositories.json; sourceTree = "<group>"; };
+		8CA0F5B0244369A100156E63 /* BitBucketBuilds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketBuilds.json; sourceTree = "<group>"; };
+		8CA0F5B1244369A100156E63 /* BitBucketTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketTeam.json; sourceTree = "<group>"; };
+		8CA0F5B2244369A100156E63 /* BitBucketError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketError.json; sourceTree = "<group>"; };
+		8CA0F5B3244369A100156E63 /* BitBucketPullRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketPullRequest.json; sourceTree = "<group>"; };
+		8CA0F5B4244369A100156E63 /* GitHubPullRequests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GitHubPullRequests.json; sourceTree = "<group>"; };
+		8CA0F5B5244369A100156E63 /* GitHubError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GitHubError.json; sourceTree = "<group>"; };
+		8CA0F5B6244369A100156E63 /* GiHubCommits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GiHubCommits.json; sourceTree = "<group>"; };
+		8CA0F5B7244369A100156E63 /* BitBucketPaginatedRepositories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketPaginatedRepositories.json; sourceTree = "<group>"; };
+		8CA0F5B8244369A100156E63 /* BitBucketUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketUser.json; sourceTree = "<group>"; };
+		8CA0F5B9244369A100156E63 /* GitHubBuilds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GitHubBuilds.json; sourceTree = "<group>"; };
+		8CA0F5BA244369A200156E63 /* BitBucketEmptyPaginatedRepositories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketEmptyPaginatedRepositories.json; sourceTree = "<group>"; };
+		8CA0F5BB244369A200156E63 /* GitHubUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GitHubUser.json; sourceTree = "<group>"; };
+		8CA0F5BC244369A200156E63 /* GitHubEmptyPaginatedRepositories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GitHubEmptyPaginatedRepositories.json; sourceTree = "<group>"; };
+		8CA0F5BD244369A200156E63 /* BitBucketCommits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketCommits.json; sourceTree = "<group>"; };
+		8CAD2FB024404B9000969D76 /* StatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProtocol.swift; sourceTree = "<group>"; };
+		8CAD2FB22440522000969D76 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		8CB554882442E53E00E21E50 /* GitHubBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubBuild.swift; sourceTree = "<group>"; };
+		8CB9BF8724307103002EC8D2 /* BitBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitBucket.swift; sourceTree = "<group>"; };
+		8CB9BF8A243073D7002EC8D2 /* BitBucketPaginated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitBucketPaginated.swift; sourceTree = "<group>"; };
+		8CB9BF8C243073EA002EC8D2 /* GitHubPaginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPaginated.swift; sourceTree = "<group>"; };
+		8CB9BF8E24307882002EC8D2 /* BitBucketUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketUser.swift; sourceTree = "<group>"; };
+		8CB9BF9024307903002EC8D2 /* BitBucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketRepository.swift; sourceTree = "<group>"; };
+		8CB9BF9B24331241002EC8D2 /* XCTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestView.swift; sourceTree = "<group>"; };
+		8CB9BFA024332474002EC8D2 /* ListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTests.swift; sourceTree = "<group>"; };
+		8CC85A7424399898007FF1A0 /* GitHubError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubError.swift; sourceTree = "<group>"; };
+		8CCBE07824440D3300D09D87 /* BitBucketBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketBuild.swift; sourceTree = "<group>"; };
+		8CCBE07A24440DE100D09D87 /* BitBucketCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketCommit.swift; sourceTree = "<group>"; };
+		8CCBE07C24440E8600D09D87 /* GitHubCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCommit.swift; sourceTree = "<group>"; };
+		8CCBE07E244411F400D09D87 /* GitPullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitPullRequest.swift; sourceTree = "<group>"; };
+		8CCBE0802444121900D09D87 /* GitBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitBranch.swift; sourceTree = "<group>"; };
+		8CCBE0822444122D00D09D87 /* GitCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommit.swift; sourceTree = "<group>"; };
+		8CCBE0842444123F00D09D87 /* GitBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitBuild.swift; sourceTree = "<group>"; };
+		8CCBE08624441A6500D09D87 /* BitBucketPullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketPullRequest.swift; sourceTree = "<group>"; };
+		8CDE7A97243B76810087F61F /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		8CDE7A9C243B822F0087F61F /* IntegrateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrateViewController.swift; sourceTree = "<group>"; };
+		8CDE7A9D243B822F0087F61F /* IntegrateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegrateViewController.xib; sourceTree = "<group>"; };
+		8CDE7AA0243B82750087F61F /* IntegratePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratePresenter.swift; sourceTree = "<group>"; };
+		8CDE7AA2243B82B50087F61F /* IntegrateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrateProtocol.swift; sourceTree = "<group>"; };
+		8CDE7AA4243B83EC0087F61F /* IntegrateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrateInteractor.swift; sourceTree = "<group>"; };
+		8CE1898B243464AE001AA28C /* ListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocol.swift; sourceTree = "<group>"; };
+		8CE1CC6F24500E97003E6435 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		8CEE2C4624288209006333DA /* GitHubrepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubrepository.swift; sourceTree = "<group>"; };
+		8CEE2C49242882F9006333DA /* GitHubOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubOwner.swift; sourceTree = "<group>"; };
+		8CEE2C4C2428832C006333DA /* GitHubPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPermissions.swift; sourceTree = "<group>"; };
+		8CEE2C512428A9EB006333DA /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8CEE2C532428AA82006333DA /* GrapeCI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GrapeCI.xcdatamodel; sourceTree = "<group>"; };
+		8CEE2C562428B306006333DA /* IntegratedRepository+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IntegratedRepository+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8CEE2C572428B306006333DA /* IntegratedRepository+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IntegratedRepository+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8CFD6B7324388BB4005ECB3D /* GitProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProviderTests.swift; sourceTree = "<group>"; };
+		8CFD6B7524388C27005ECB3D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8CFD6B772438E5BD005ECB3D /* CoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreProtocol.swift; sourceTree = "<group>"; };
+		8CFD6B7A2438E74F005ECB3D /* GitHubMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubMock.swift; sourceTree = "<group>"; };
+		8CFD6B7C2438E811005ECB3D /* BitBucketMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketMock.swift; sourceTree = "<group>"; };
+		8CFD6B7E2438E85F005ECB3D /* CoreDataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMock.swift; sourceTree = "<group>"; };
+		8CFD6B902438F51A005ECB3D /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		8CFEE0CA2445816D00A7F7FE /* GitrepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitrepositoryMock.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C1C68732427D47F008C6176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1C68852427D481008C6176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74267B34245D784B0060D2F8 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C68C024286C61008C6176 /* GitHub.swift */,
+				74267B30245D604D0060D2F8 /* GitHubRequest.swift */,
+				74267B28245D45D80060D2F8 /* GitHubAdapter.swift */,
+				74267B2C245D5FA70060D2F8 /* GitHubTransformer.swift */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		74267B35245D78520060D2F8 /* BitBucket */ = {
+			isa = PBXGroup;
+			children = (
+				8CB9BF8724307103002EC8D2 /* BitBucket.swift */,
+				74267B32245D609E0060D2F8 /* BitBucketRequest.swift */,
+				74267B2A245D4C4E0060D2F8 /* BitBucketAdapter.swift */,
+				74267B2E245D5FE80060D2F8 /* BitBucketTransformer.swift */,
+			);
+			path = BitBucket;
+			sourceTree = "<group>";
+		};
+		74267B36245DF0210060D2F8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				74267B37245DF02E0060D2F8 /* Secret.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		7432019C2457143100EEDE54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7432019D2457143900EEDE54 /* View */,
+				7432019E2457144200EEDE54 /* Presenter */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		7432019D2457143900EEDE54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				743201A22457146C00EEDE54 /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7432019E2457144200EEDE54 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				743201A4245719A000EEDE54 /* WelcomePresenter.swift */,
+				7432019F2457144800EEDE54 /* Domain */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7432019F2457144800EEDE54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				743201C8245724E400EEDE54 /* FetchUserInteractor.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8C0458AB24402B7F00CB8F6B /* SourceryTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				8C0458AC24402BB300CB8F6B /* AutoSpy.stencil */,
+			);
+			path = SourceryTemplates;
+			sourceTree = "<group>";
+		};
+		8C0458AF24402C5F00CB8F6B /* SpyObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8C0458B02440301200CB8F6B /* AutoSpy.generated.swift */,
+			);
+			path = SpyObjects;
+			sourceTree = "<group>";
+		};
+		8C0458BA2440431800CB8F6B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C0458BB2440432B00CB8F6B /* IntegratePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8C0458BD2440471800CB8F6B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8C0458BE2440472900CB8F6B /* IntegrateInteractorTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8C17AB132440708D00D8B85A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				74267B34245D784B0060D2F8 /* GitHub */,
+				74267B35245D78520060D2F8 /* BitBucket */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8C1C686D2427D47F008C6176 = {
+			isa = PBXGroup;
+			children = (
+				8C1C68782427D47F008C6176 /* GrapeCI */,
+				8C1C688B2427D481008C6176 /* GrapeCITests */,
+				8C1C68772427D47F008C6176 /* Products */,
+				8C26C28324286E33003BFADE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8C1C68772427D47F008C6176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C68762427D47F008C6176 /* GrapeCI.app */,
+				8C1C68882427D481008C6176 /* GrapeCIUnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C1C68782427D47F008C6176 /* GrapeCI */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C68AC2427D998008C6176 /* main.swift */,
+				8C1C68792427D47F008C6176 /* AppDelegate.swift */,
+				8CDE7A97243B76810087F61F /* FlowController.swift */,
+				74267B3B245DF5AC0060D2F8 /* Constants.swift */,
+				8C1C689B2427D567008C6176 /* Module */,
+				8C1C68BA24286973008C6176 /* Model */,
+				8C1C68A52427D71B008C6176 /* Core */,
+				8CDE7A99243B7CF30087F61F /* Extension */,
+				74267B36245DF0210060D2F8 /* Util */,
+				8C1C68972427D48C008C6176 /* Support Files */,
+			);
+			path = GrapeCI;
+			sourceTree = "<group>";
+		};
+		8C1C688B2427D481008C6176 /* GrapeCITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CB9BF922432245F002EC8D2 /* Module */,
+				8CFD6B7224388BA2005ECB3D /* Core */,
+				8CB9BF9A2433122B002EC8D2 /* Util */,
+				8C0458AF24402C5F00CB8F6B /* SpyObjects */,
+				8CB9BF972432271F002EC8D2 /* Mock */,
+				8C1C68982427D49A008C6176 /* Support Files */,
+			);
+			path = GrapeCITests;
+			sourceTree = "<group>";
+		};
+		8C1C68972427D48C008C6176 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C687D2427D481008C6176 /* Assets.xcassets */,
+				8C1C68822427D481008C6176 /* Info.plist */,
+				8C1C68832427D481008C6176 /* GrapeCI.entitlements */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		8C1C68982427D49A008C6176 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C0458AB24402B7F00CB8F6B /* SourceryTemplates */,
+				8CFD6B812438F4AF005ECB3D /* Json */,
+				8C1C688E2427D481008C6176 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		8C1C689B2427D567008C6176 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				7432019C2457143100EEDE54 /* Configuration */,
+				8C4355AA244EBBFF00F92739 /* AppIcon */,
+				8C1C68B02427DA39008C6176 /* Menu */,
+				8C8CF6B4242B396200A8B0C9 /* List */,
+				8C7EDD4E24387A8F000991BD /* Integrate */,
+				8C1C68AF2427DA2D008C6176 /* Status */,
+				8C8B6C3E245338E60003833D /* ShowLog */,
+				8C85A7BC244D70DE00C97E1B /* Builder */,
+				8C85A7C3244D7CAB00C97E1B /* Scheduler */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8C1C68A22427D68B008C6176 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C68A32427D6AB008C6176 /* RefreshGitRepositoryInterator.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8C1C68A52427D71B008C6176 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8CFD6B772438E5BD005ECB3D /* CoreProtocol.swift */,
+				8C1C68A62427D72F008C6176 /* GitProvider.swift */,
+				8CEE2C512428A9EB006333DA /* CoreDataStack.swift */,
+				8C17AB132440708D00D8B85A /* Service */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8C1C68AF2427DA2D008C6176 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD2FB024404B9000969D76 /* StatusProtocol.swift */,
+				8CAD2FA924404B5700969D76 /* View */,
+				8CAD2FAA24404B5B00969D76 /* Presenter */,
+				8C1C68A22427D68B008C6176 /* Domain */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		8C1C68B02427DA39008C6176 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C68B32427DA7D008C6176 /* Menu.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8C1C68BA24286973008C6176 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CC85A8C2439A173007FF1A0 /* Common */,
+				8CEE2C552428B2E0006333DA /* CoreData */,
+				8CEE2C45242881FA006333DA /* GitHub */,
+				8CB9BF8924307391002EC8D2 /* BitBucket */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C26C28324286E33003BFADE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C26C28424286E33003BFADE /* OAuth2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C3895AB243AFF60005DFDB1 /* TestSpy */ = {
+			isa = PBXGroup;
+			children = (
+				8C3895AC243AFF74005DFDB1 /* CallstackMatcher.swift */,
+				8C3895AD243AFF75005DFDB1 /* CallstackPredicate.swift */,
+				8C3895A0243AFF09005DFDB1 /* TestSpy.swift */,
+				8C3895A1243AFF09005DFDB1 /* CallstackContainer.swift */,
+			);
+			path = TestSpy;
+			sourceTree = "<group>";
+		};
+		8C4355AA244EBBFF00F92739 /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				8C4355AB244EBC1700F92739 /* AppIcon.swift */,
+			);
+			path = AppIcon;
+			sourceTree = "<group>";
+		};
+		8C562125243EFA10004A8C0E /* Integrate */ = {
+			isa = PBXGroup;
+			children = (
+				8C0458BA2440431800CB8F6B /* Presenter */,
+				8C0458BD2440471800CB8F6B /* Domain */,
+			);
+			path = Integrate;
+			sourceTree = "<group>";
+		};
+		8C7EDD4E24387A8F000991BD /* Integrate */ = {
+			isa = PBXGroup;
+			children = (
+				8CDE7AA2243B82B50087F61F /* IntegrateProtocol.swift */,
+				8C7EDD4F24387AA1000991BD /* View */,
+				8C7EDD5024387AA6000991BD /* Presenter */,
+				8C7EDD5124387AB1000991BD /* Domain */,
+			);
+			path = Integrate;
+			sourceTree = "<group>";
+		};
+		8C7EDD4F24387AA1000991BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CDE7A9C243B822F0087F61F /* IntegrateViewController.swift */,
+				8CDE7A9D243B822F0087F61F /* IntegrateViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C7EDD5024387AA6000991BD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CDE7AA0243B82750087F61F /* IntegratePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8C7EDD5124387AB1000991BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8CDE7AA4243B83EC0087F61F /* IntegrateInteractor.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8C7EDD5324387BA5000991BD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CB9BFA024332474002EC8D2 /* ListPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8C7EDD5424387BA8000991BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8C7EDD5624387BD3000991BD /* FetchGitRepositoriesInteractorTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8C85A7BC244D70DE00C97E1B /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				8C85A7BD244D711800C97E1B /* BuilderController.swift */,
+				8C85A7BE244D711800C97E1B /* PipeLine.swift */,
+				8C85A7BF244D711800C97E1B /* ShellCommand.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		8C85A7C3244D7CAB00C97E1B /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				8C85A7C4244D7CC900C97E1B /* SchedulerController.swift */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
+		8C8B6C3E245338E60003833D /* ShowLog */ = {
+			isa = PBXGroup;
+			children = (
+				8C8B6C3F245338F70003833D /* View */,
+			);
+			path = ShowLog;
+			sourceTree = "<group>";
+		};
+		8C8B6C3F245338F70003833D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C8B6C402453390C0003833D /* ShowLogViewController.swift */,
+				8C8B6C412453390C0003833D /* ShowLogViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C8CF6B4242B396200A8B0C9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8CE1898B243464AE001AA28C /* ListProtocol.swift */,
+				8CE1898D24346535001AA28C /* View */,
+				8CE1898E24346546001AA28C /* Presenter */,
+				8C8CF6BB242B39F700A8B0C9 /* Domain */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8C8CF6BB242B39F700A8B0C9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CF6C0242B498200A8B0C9 /* FetchGitRepositoriesInteractor.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8CAD2FA924404B5700969D76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD2FB22440522000969D76 /* StatusViewController.swift */,
+				8C17AB142440730500D8B85A /* StatusViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CAD2FAA24404B5B00969D76 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C68A02427D653008C6176 /* StatusPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CB9BF8924307391002EC8D2 /* BitBucket */ = {
+			isa = PBXGroup;
+			children = (
+				8CB9BF8E24307882002EC8D2 /* BitBucketUser.swift */,
+				8CB9BF8A243073D7002EC8D2 /* BitBucketPaginated.swift */,
+				8C26C28A24286EE6003BFADE /* BitBucketTeam.swift */,
+				8CB9BF9024307903002EC8D2 /* BitBucketRepository.swift */,
+				8C7EDD4824371AD2000991BD /* BitBucketError.swift */,
+				8CCBE07824440D3300D09D87 /* BitBucketBuild.swift */,
+				8CCBE07A24440DE100D09D87 /* BitBucketCommit.swift */,
+				8CCBE08624441A6500D09D87 /* BitBucketPullRequest.swift */,
+			);
+			path = BitBucket;
+			sourceTree = "<group>";
+		};
+		8CB9BF922432245F002EC8D2 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8CB9BF932432246B002EC8D2 /* List */,
+				8C562125243EFA10004A8C0E /* Integrate */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8CB9BF932432246B002EC8D2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8C7EDD5324387BA5000991BD /* Presenter */,
+				8C7EDD5424387BA8000991BD /* Domain */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8CB9BF972432271F002EC8D2 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8CFEE0CA2445816D00A7F7FE /* GitrepositoryMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8CB9BF9A2433122B002EC8D2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8C3895AB243AFF60005DFDB1 /* TestSpy */,
+				8CB9BF9B24331241002EC8D2 /* XCTestView.swift */,
+				8C7EDD4A24379F81000991BD /* XCTestCase.swift */,
+				8CFD6B902438F51A005ECB3D /* Json.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8CC85A8C2439A173007FF1A0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C68BB24286982008C6176 /* GitRepository.swift */,
+				8CCBE07E244411F400D09D87 /* GitPullRequest.swift */,
+				8CCBE0802444121900D09D87 /* GitBranch.swift */,
+				8CCBE0822444122D00D09D87 /* GitCommit.swift */,
+				8CCBE0842444123F00D09D87 /* GitBuild.swift */,
+				8C1C68BE242869CE008C6176 /* Provider.swift */,
+				8C26C28824286EB5003BFADE /* GitUser.swift */,
+				8CFD6B7524388C27005ECB3D /* NetworkError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8CDE7A99243B7CF30087F61F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				74FADBC6245BD7050011AFF7 /* OAuth2DataLoader.swift */,
+				8C562123243DE927004A8C0E /* Collection.swift */,
+				8CE1CC6F24500E97003E6435 /* NSImage.swift */,
+				74040015245C09BA00750345 /* ClosableWindow.swift */,
+				74267B46245E92A90060D2F8 /* ZipCollection.swift */,
+				7496C3E1246513CD00990BEB /* Alert.swift */,
+				7496C3E32465156700990BEB /* NSButton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8CE1898D24346535001AA28C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CF6BC242B3D6F00A8B0C9 /* ListViewController.swift */,
+				8C8CF6BD242B3D6F00A8B0C9 /* ListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CE1898E24346546001AA28C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C8CF6B9242B39F300A8B0C9 /* ListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CEE2C45242881FA006333DA /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				8CEE2C4624288209006333DA /* GitHubrepository.swift */,
+				8CEE2C49242882F9006333DA /* GitHubOwner.swift */,
+				8CEE2C4C2428832C006333DA /* GitHubPermissions.swift */,
+				8CB9BF8C243073EA002EC8D2 /* GitHubPaginated.swift */,
+				8CC85A7424399898007FF1A0 /* GitHubError.swift */,
+				8C17AB172440927F00D8B85A /* GitHubPullRequest.swift */,
+				8CB554882442E53E00E21E50 /* GitHubBuild.swift */,
+				8CCBE07C24440E8600D09D87 /* GitHubCommit.swift */,
+				743201CA2457FC5C00EEDE54 /* GitHubUser.swift */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		8CEE2C552428B2E0006333DA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8CEE2C532428AA82006333DA /* GrapeCI.xcdatamodel */,
+				74BDAF64246167400007E63E /* LoggedProvider+CoreDataClass.swift */,
+				74BDAF65246167400007E63E /* LoggedProvider+CoreDataProperties.swift */,
+				8C8B6C3A24532EAD0003833D /* BuildLog+CoreDataClass.swift */,
+				8C8B6C3B24532EAD0003833D /* BuildLog+CoreDataProperties.swift */,
+				8CEE2C572428B306006333DA /* IntegratedRepository+CoreDataProperties.swift */,
+				8CEE2C562428B306006333DA /* IntegratedRepository+CoreDataClass.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8CFD6B7224388BA2005ECB3D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8CFD6B7324388BB4005ECB3D /* GitProviderTests.swift */,
+				8CFD6B792438E73A005ECB3D /* Mock */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8CFD6B792438E73A005ECB3D /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8CFD6B7E2438E85F005ECB3D /* CoreDataMock.swift */,
+				8CFD6B7A2438E74F005ECB3D /* GitHubMock.swift */,
+				8CFD6B7C2438E811005ECB3D /* BitBucketMock.swift */,
+				8C389583243AE3CF005DFDB1 /* URLProtocolMock.swift */,
+				8C389586243AE5DB005DFDB1 /* URLResponseMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8CFD6B812438F4AF005ECB3D /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				8CA0F5B0244369A100156E63 /* BitBucketBuilds.json */,
+				8CA0F5BD244369A200156E63 /* BitBucketCommits.json */,
+				8CA0F5BA244369A200156E63 /* BitBucketEmptyPaginatedRepositories.json */,
+				8CA0F5B2244369A100156E63 /* BitBucketError.json */,
+				8CA0F5B7244369A100156E63 /* BitBucketPaginatedRepositories.json */,
+				8CA0F5B3244369A100156E63 /* BitBucketPullRequest.json */,
+				8CA0F5B1244369A100156E63 /* BitBucketTeam.json */,
+				8CA0F5B8244369A100156E63 /* BitBucketUser.json */,
+				8CA0F5B6244369A100156E63 /* GiHubCommits.json */,
+				8CA0F5B9244369A100156E63 /* GitHubBuilds.json */,
+				8CA0F5BC244369A200156E63 /* GitHubEmptyPaginatedRepositories.json */,
+				8CA0F5B5244369A100156E63 /* GitHubError.json */,
+				8CA0F5AF244369A100156E63 /* GitHubPaginatedRepositories.json */,
+				8CA0F5B4244369A100156E63 /* GitHubPullRequests.json */,
+				8CA0F5BB244369A200156E63 /* GitHubUser.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C1C68752427D47F008C6176 /* GrapeCI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C1C68912427D481008C6176 /* Build configuration list for PBXNativeTarget "GrapeCI" */;
+			buildPhases = (
+				8C17AB1B2440DC7700D8B85A /* Lint */,
+				8C1C68722427D47F008C6176 /* Sources */,
+				8C1C68732427D47F008C6176 /* Frameworks */,
+				8C1C68742427D47F008C6176 /* Resources */,
+				8C0458C02440486C00CB8F6B /* Sourcery */,
+				74FADBC5245BC4570011AFF7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrapeCI;
+			productName = GrapeCI;
+			productReference = 8C1C68762427D47F008C6176 /* GrapeCI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C1C68872427D481008C6176 /* GrapeCIUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C1C68942427D481008C6176 /* Build configuration list for PBXNativeTarget "GrapeCIUnitTests" */;
+			buildPhases = (
+				8C1C68842427D481008C6176 /* Sources */,
+				8C1C68852427D481008C6176 /* Frameworks */,
+				8C1C68862427D481008C6176 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C1C688A2427D481008C6176 /* PBXTargetDependency */,
+			);
+			name = GrapeCIUnitTests;
+			productName = GrapeCITests;
+			productReference = 8C1C68882427D481008C6176 /* GrapeCIUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C1C686E2427D47F008C6176 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Ricardo Maqueda Martinez";
+				TargetAttributes = {
+					8C1C68752427D47F008C6176 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8C1C68872427D481008C6176 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8C1C68752427D47F008C6176;
+					};
+				};
+			};
+			buildConfigurationList = 8C1C68712427D47F008C6176 /* Build configuration list for PBXProject "GrapeCI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C1C686D2427D47F008C6176;
+			productRefGroup = 8C1C68772427D47F008C6176 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C1C68752427D47F008C6176 /* GrapeCI */,
+				8C1C68872427D481008C6176 /* GrapeCIUnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C1C68742427D47F008C6176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CDE7A9F243B822F0087F61F /* IntegrateViewController.xib in Resources */,
+				8C1C687E2427D481008C6176 /* Assets.xcassets in Resources */,
+				8C8CF6BF242B3D6F00A8B0C9 /* ListViewController.xib in Resources */,
+				8C17AB152440730500D8B85A /* StatusViewController.xib in Resources */,
+				8C8B6C432453390C0003833D /* ShowLogViewController.xib in Resources */,
+				8C1C68B42427DA7D008C6176 /* Menu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1C68862427D481008C6176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CFEE0B22445743B00A7F7FE /* GiHubCommits.json in Resources */,
+				8CFEE0B72445743B00A7F7FE /* GitHubPullRequests.json in Resources */,
+				8CFEE0B62445743B00A7F7FE /* GitHubPaginatedRepositories.json in Resources */,
+				8CFEE0B32445743B00A7F7FE /* GitHubBuilds.json in Resources */,
+				8CFEE0B42445743B00A7F7FE /* GitHubEmptyPaginatedRepositories.json in Resources */,
+				8CFEE0AB2445743B00A7F7FE /* BitBucketCommits.json in Resources */,
+				8CFEE0AA2445743B00A7F7FE /* BitBucketBuilds.json in Resources */,
+				8CFEE0B52445743B00A7F7FE /* GitHubError.json in Resources */,
+				8CFEE0AE2445743B00A7F7FE /* BitBucketPaginatedRepositories.json in Resources */,
+				8CFEE0B02445743B00A7F7FE /* BitBucketTeam.json in Resources */,
+				8CFEE0AD2445743B00A7F7FE /* BitBucketError.json in Resources */,
+				8CFEE0AF2445743B00A7F7FE /* BitBucketPullRequest.json in Resources */,
+				8CFEE0B82445743B00A7F7FE /* GitHubUser.json in Resources */,
+				8CFEE0B12445743B00A7F7FE /* BitBucketUser.json in Resources */,
+				8CFEE0AC2445743B00A7F7FE /* BitBucketEmptyPaginatedRepositories.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C0458C02440486C00CB8F6B /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which sourcery >/dev/null; then\n    sourcery --sources ./GrapeCI --templates ./GrapeCITests/Support\\ Files/SourceryTemplates --output ./GrapeCITests/SpyObjects --args module=\"GrapeCI\",import=\"Foundation\",import=\"Cocoa\",import=\"Combine\"\nelse\n  echo \"warning: Sourcery is not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		8C17AB1B2440DC7700D8B85A /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  cd GrapeCI\n  swiftlint\nelse\n  echo \"warning: SwiftLint is not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C1C68722427D47F008C6176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1C68BC24286982008C6176 /* GitRepository.swift in Sources */,
+				8CB9BF8824307103002EC8D2 /* BitBucket.swift in Sources */,
+				8C26C28B24286EE6003BFADE /* BitBucketTeam.swift in Sources */,
+				7496C3E2246513CD00990BEB /* Alert.swift in Sources */,
+				8CEE2C582428B306006333DA /* IntegratedRepository+CoreDataClass.swift in Sources */,
+				8CB554892442E53E00E21E50 /* GitHubBuild.swift in Sources */,
+				8CE1898C243464AE001AA28C /* ListProtocol.swift in Sources */,
+				8CEE2C4724288209006333DA /* GitHubrepository.swift in Sources */,
+				8C562124243DE927004A8C0E /* Collection.swift in Sources */,
+				8CE1CC7024500E97003E6435 /* NSImage.swift in Sources */,
+				743201C9245724E400EEDE54 /* FetchUserInteractor.swift in Sources */,
+				8C1C68A12427D653008C6176 /* StatusPresenter.swift in Sources */,
+				74267B3C245DF5AC0060D2F8 /* Constants.swift in Sources */,
+				8CFD6B782438E5BD005ECB3D /* CoreProtocol.swift in Sources */,
+				8CEE2C4D2428832C006333DA /* GitHubPermissions.swift in Sources */,
+				8CB9BF8B243073D7002EC8D2 /* BitBucketPaginated.swift in Sources */,
+				74267B2D245D5FA70060D2F8 /* GitHubTransformer.swift in Sources */,
+				8C8CF6BA242B39F300A8B0C9 /* ListPresenter.swift in Sources */,
+				74267B2F245D5FE80060D2F8 /* BitBucketTransformer.swift in Sources */,
+				8C26C28924286EB5003BFADE /* GitUser.swift in Sources */,
+				8CEE2C4A242882F9006333DA /* GitHubOwner.swift in Sources */,
+				8CDE7A98243B76810087F61F /* FlowController.swift in Sources */,
+				8C1C68A72427D72F008C6176 /* GitProvider.swift in Sources */,
+				8CDE7AA5243B83EC0087F61F /* IntegrateInteractor.swift in Sources */,
+				743201CB2457FC5C00EEDE54 /* GitHubUser.swift in Sources */,
+				74BDAF67246167400007E63E /* LoggedProvider+CoreDataProperties.swift in Sources */,
+				8C1C68BF242869CE008C6176 /* Provider.swift in Sources */,
+				8CAD2FB42440522000969D76 /* StatusViewController.swift in Sources */,
+				8C1C68B92427DF5A008C6176 /* main.swift in Sources */,
+				8CAD2FB124404B9000969D76 /* StatusProtocol.swift in Sources */,
+				8CEE2C592428B306006333DA /* IntegratedRepository+CoreDataProperties.swift in Sources */,
+				8CDE7AA3243B82B50087F61F /* IntegrateProtocol.swift in Sources */,
+				8CCBE0832444122D00D09D87 /* GitCommit.swift in Sources */,
+				8CB9BF9124307903002EC8D2 /* BitBucketRepository.swift in Sources */,
+				8C8B6C422453390C0003833D /* ShowLogViewController.swift in Sources */,
+				74FADBC7245BD7050011AFF7 /* OAuth2DataLoader.swift in Sources */,
+				8CEE2C522428A9EB006333DA /* CoreDataStack.swift in Sources */,
+				8C8B6C3C24532EAD0003833D /* BuildLog+CoreDataClass.swift in Sources */,
+				8CB9BF8D243073EA002EC8D2 /* GitHubPaginated.swift in Sources */,
+				74040016245C09BA00750345 /* ClosableWindow.swift in Sources */,
+				8C8B6C3D24532EAD0003833D /* BuildLog+CoreDataProperties.swift in Sources */,
+				8CCBE07924440D3300D09D87 /* BitBucketBuild.swift in Sources */,
+				8C17AB182440927F00D8B85A /* GitHubPullRequest.swift in Sources */,
+				74267B38245DF02E0060D2F8 /* Secret.swift in Sources */,
+				8CCBE07B24440DE100D09D87 /* BitBucketCommit.swift in Sources */,
+				8CDE7AA1243B82750087F61F /* IntegratePresenter.swift in Sources */,
+				8C1C68C224286C61008C6176 /* GitHub.swift in Sources */,
+				8CCBE07F244411F400D09D87 /* GitPullRequest.swift in Sources */,
+				74267B2B245D4C4E0060D2F8 /* BitBucketAdapter.swift in Sources */,
+				8CCBE07D24440E8600D09D87 /* GitHubCommit.swift in Sources */,
+				74267B33245D609E0060D2F8 /* BitBucketRequest.swift in Sources */,
+				8CDE7A9E243B822F0087F61F /* IntegrateViewController.swift in Sources */,
+				8C85A7C5244D7CC900C97E1B /* SchedulerController.swift in Sources */,
+				8C1C687A2427D47F008C6176 /* AppDelegate.swift in Sources */,
+				7496C3E42465156700990BEB /* NSButton.swift in Sources */,
+				8C1C68A42427D6AB008C6176 /* RefreshGitRepositoryInterator.swift in Sources */,
+				8CCBE08724441A6500D09D87 /* BitBucketPullRequest.swift in Sources */,
+				8CC85A7524399898007FF1A0 /* GitHubError.swift in Sources */,
+				8CEE2C542428AA83006333DA /* GrapeCI.xcdatamodel in Sources */,
+				8C7EDD4924371AD2000991BD /* BitBucketError.swift in Sources */,
+				74BDAF66246167400007E63E /* LoggedProvider+CoreDataClass.swift in Sources */,
+				74267B31245D604D0060D2F8 /* GitHubRequest.swift in Sources */,
+				743201A5245719A000EEDE54 /* WelcomePresenter.swift in Sources */,
+				74267B29245D45D80060D2F8 /* GitHubAdapter.swift in Sources */,
+				8CB9BF8F24307882002EC8D2 /* BitBucketUser.swift in Sources */,
+				8CCBE0812444121900D09D87 /* GitBranch.swift in Sources */,
+				8C8CF6BE242B3D6F00A8B0C9 /* ListViewController.swift in Sources */,
+				8C85A7C1244D711800C97E1B /* PipeLine.swift in Sources */,
+				8CCBE0852444123F00D09D87 /* GitBuild.swift in Sources */,
+				8C85A7C2244D711800C97E1B /* ShellCommand.swift in Sources */,
+				743201A32457146C00EEDE54 /* WelcomeView.swift in Sources */,
+				8C85A7C0244D711800C97E1B /* BuilderController.swift in Sources */,
+				8C4355AC244EBC1700F92739 /* AppIcon.swift in Sources */,
+				74267B47245E92A90060D2F8 /* ZipCollection.swift in Sources */,
+				8CFD6B7624388C27005ECB3D /* NetworkError.swift in Sources */,
+				8C8CF6C1242B498200A8B0C9 /* FetchGitRepositoriesInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1C68842427D481008C6176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3895A2243AFF09005DFDB1 /* TestSpy.swift in Sources */,
+				8C3895A4243AFF09005DFDB1 /* CallstackContainer.swift in Sources */,
+				8CB9BF9C24331241002EC8D2 /* XCTestView.swift in Sources */,
+				8C7EDD5724387BD3000991BD /* FetchGitRepositoriesInteractorTests.swift in Sources */,
+				8CB9BFA124332474002EC8D2 /* ListPresenterTests.swift in Sources */,
+				8C7EDD4B24379F81000991BD /* XCTestCase.swift in Sources */,
+				8C3895AE243AFF75005DFDB1 /* CallstackMatcher.swift in Sources */,
+				8CFD6B912438F51A005ECB3D /* Json.swift in Sources */,
+				8CFD6B7F2438E85F005ECB3D /* CoreDataMock.swift in Sources */,
+				8CFD6B7424388BB4005ECB3D /* GitProviderTests.swift in Sources */,
+				8CFD6B7B2438E74F005ECB3D /* GitHubMock.swift in Sources */,
+				8C0458BC2440432B00CB8F6B /* IntegratePresenterTests.swift in Sources */,
+				8C3895B0243AFF75005DFDB1 /* CallstackPredicate.swift in Sources */,
+				8C389587243AE5DB005DFDB1 /* URLResponseMock.swift in Sources */,
+				8CFD6B802438E99D005ECB3D /* GrapeCI.xcdatamodel in Sources */,
+				8CFD6B7D2438E811005ECB3D /* BitBucketMock.swift in Sources */,
+				8CFEE0CC2445818D00A7F7FE /* GitrepositoryMock.swift in Sources */,
+				8C0458BF2440472900CB8F6B /* IntegrateInteractorTests.swift in Sources */,
+				8C389584243AE3CF005DFDB1 /* URLProtocolMock.swift in Sources */,
+				8C0458B22440305C00CB8F6B /* AutoSpy.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C1C688A2427D481008C6176 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C1C68752427D47F008C6176 /* GrapeCI */;
+			targetProxy = 8C1C68892427D481008C6176 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8C1C688F2427D481008C6176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C1C68902427D481008C6176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8C1C68922427D481008C6176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GrapeCI/Support Files/GrapeCI.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FZ32CY9FLM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = "GrapeCI/Support Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.molestudio.GrapeCI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C1C68932427D481008C6176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GrapeCI/Support Files/GrapeCI.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FZ32CY9FLM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = "GrapeCI/Support Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.molestudio.GrapeCI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8C1C68952427D481008C6176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FZ32CY9FLM;
+				INFOPLIST_FILE = "GrapeCITests/Support Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = es.molestudio.GrapeCITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrapeCI.app/Contents/MacOS/GrapeCI";
+			};
+			name = Debug;
+		};
+		8C1C68962427D481008C6176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FZ32CY9FLM;
+				INFOPLIST_FILE = "GrapeCITests/Support Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = es.molestudio.GrapeCITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrapeCI.app/Contents/MacOS/GrapeCI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C1C68712427D47F008C6176 /* Build configuration list for PBXProject "GrapeCI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1C688F2427D481008C6176 /* Debug */,
+				8C1C68902427D481008C6176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C1C68912427D481008C6176 /* Build configuration list for PBXNativeTarget "GrapeCI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1C68922427D481008C6176 /* Debug */,
+				8C1C68932427D481008C6176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C1C68942427D481008C6176 /* Build configuration list for PBXNativeTarget "GrapeCIUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1C68952427D481008C6176 /* Debug */,
+				8C1C68962427D481008C6176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C1C686E2427D47F008C6176 /* Project object */;
+}

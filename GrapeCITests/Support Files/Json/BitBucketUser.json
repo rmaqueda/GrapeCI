@@ -1,0 +1,32 @@
+{
+	"username": "rmaqueda",
+	"display_name": "rmaqueda",
+	"has_2fa_enabled": null,
+	"links": {
+		"hooks": {
+			"href": "https://api.bitbucket.org/2.0/users/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D/hooks"
+		},
+		"self": {
+			"href": "https://api.bitbucket.org/2.0/users/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D"
+		},
+		"repositories": {
+			"href": "https://api.bitbucket.org/2.0/repositories/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D"
+		},
+		"html": {
+			"href": "https://bitbucket.org/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D/"
+		},
+		"avatar": {
+			"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:5b636254-9e7a-4894-8f0c-f65c18730042/8fe34e79-b035-433d-a067-511bcc63ef11/128"
+		},
+		"snippets": {
+			"href": "https://api.bitbucket.org/2.0/snippets/%7Bb17dfb37-4bbd-4f5a-8d23-fd67b771f2b6%7D"
+		}
+	},
+	"nickname": "rmaqueda",
+	"account_id": "557058:5b636254-9e7a-4894-8f0c-f65c18730042",
+	"created_on": "2012-11-24T12:53:06.603589+00:00",
+	"is_staff": false,
+	"account_status": "active",
+	"type": "user",
+	"uuid": "{b17dfb37-4bbd-4f5a-8d23-fd67b771f2b6}"
+}

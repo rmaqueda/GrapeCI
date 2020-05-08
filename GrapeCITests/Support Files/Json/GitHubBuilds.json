@@ -1,0 +1,32 @@
+{
+	"url": "https://api.github.com/repos/rmaqueda/GrapeCIClean/statuses/8ccb18f61b1fd5cd44cf69f86a60c0692e62efa8",
+	"avatar_url": "https://avatars1.githubusercontent.com/oa/1215978?v=4",
+	"id": 9350716982,
+	"node_id": "MDEzOlN0YXR1c0NvbnRleHQ5MzUwNzE2OTgy",
+	"state": "success",
+	"description": "Build by rmaqueda",
+	"target_url": null,
+	"context": "GrapeCI",
+	"created_at": "2020-04-12T15:03:13Z",
+	"updated_at": "2020-04-12T15:03:13Z",
+	"creator": {
+		"login": "rmaqueda",
+		"id": 2968375,
+		"node_id": "MDQ6VXNlcjI5NjgzNzU=",
+		"avatar_url": "https://avatars2.githubusercontent.com/u/2968375?v=4",
+		"gravatar_id": "",
+		"url": "https://api.github.com/users/rmaqueda",
+		"html_url": "https://github.com/rmaqueda",
+		"followers_url": "https://api.github.com/users/rmaqueda/followers",
+		"following_url": "https://api.github.com/users/rmaqueda/following{/other_user}",
+		"gists_url": "https://api.github.com/users/rmaqueda/gists{/gist_id}",
+		"starred_url": "https://api.github.com/users/rmaqueda/starred{/owner}{/repo}",
+		"subscriptions_url": "https://api.github.com/users/rmaqueda/subscriptions",
+		"organizations_url": "https://api.github.com/users/rmaqueda/orgs",
+		"repos_url": "https://api.github.com/users/rmaqueda/repos",
+		"events_url": "https://api.github.com/users/rmaqueda/events{/privacy}",
+		"received_events_url": "https://api.github.com/users/rmaqueda/received_events",
+		"type": "User",
+		"site_admin": false
+	}
+}

@@ -1,5 +1,13 @@
 ### GRAPECI
 
+[![Platform](https://img.shields.io/badge/platform-macos-brightgreen.svg)](https://github.com/rmaqueda/OpenWeather)
+
+### Metrics
+
+[![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=coverage)](https://sonarcloud.io/project/activity?custom_metrics=coverage&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=ncloc)](https://sonarcloud.io/project/activity?custom_metrics=nlocs&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=duplicated_lines_density)](https://sonarcloud.io/project/activity?custom_metrics=duplicated_lines_density&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=sqale_index)](https://sonarcloud.io/project/activity?custom_metrics=sqale_index&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=code_smells)](https://sonarcloud.io/project/activity?custom_metrics=code_smells&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=bugs)](https://sonarcloud.io/project/activity?custom_metrics=bugs&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=vulnerabilities)](https://sonarcloud.io/project/activity?custom_metrics=vulnerabilities&graph=custom&id=GrapeCI)
+
+[![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=alert_status) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=sqale_rating)](https://sonarcloud.io/project/activity?custom_metrics=sqale_rating&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=reliability_rating)](https://sonarcloud.io/project/activity?custom_metrics=reliability_rating&graph=custom&id=GrapeCI) [![](https://sonarcloud.io/api/project_badges/measure?project=GrapeCI&metric=security_rating)](https://sonarcloud.io/project/activity?custom_metrics=security_rating&graph=custom&id=GrapeCI)
+
 
 ## What is GrapeCI?
 

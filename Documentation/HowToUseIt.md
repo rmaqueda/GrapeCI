@@ -26,4 +26,4 @@ The list shows the currently integrated repository and a TextField to search a n
 
 7. You can see the log of the build clicking on the status icon:
 
-![](./ScreenShots/Log.png)
+![](./ScreenShots/log.png)

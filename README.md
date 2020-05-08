@@ -39,6 +39,10 @@ Build by yourself:
 * Edit the GrapeCI scheme and write the oauth secrets enviroment varialbes (You will need to setup the aouth configuration firstly on [Github](https://github.com/settings/applications/new) or [Bitbucket](https://developer.atlassian.com/cloud/bitbucket/oauth-2/))
 * Run or Archive the project
 
+## How to use it?
+
+Take a look to this [guide](./Documentation/HowToUseIt.md)
+
 ## Build script
 
 To create a custom builds for different scenarios, the build script receives these environment variables:

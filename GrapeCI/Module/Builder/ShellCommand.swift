@@ -14,10 +14,6 @@ struct ShellResult {
     let status: Int
 }
 
-extension Notification.Name {
-    static let pipeCommandLog = Notification.Name("pipeCommandLog")
-}
-
 class ShellCommand {
     private let workingDir: String
     private let isVerbose: Bool
@@ -52,7 +48,6 @@ class ShellCommand {
             let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
             let output = String(decoding: outputData, as: UTF8.self)
             let result = ShellResult(output: output, status: Int(proces.terminationStatus))
-
             completion(result)
         }
 

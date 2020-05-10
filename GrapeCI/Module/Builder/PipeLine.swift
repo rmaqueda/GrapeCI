@@ -29,7 +29,7 @@ struct PipeLine {
     func run(completion: @escaping (PipeLineResult) -> Void) {
         let pipeLine = pipeLineReplacingVariables(repository: self.repository,
                                                   pullRequest: self.pullRequest)
-        
+
         DispatchQueue.global(qos: .unspecified).async {
             do {
                 try self.shell.run(command: pipeLine) { result in

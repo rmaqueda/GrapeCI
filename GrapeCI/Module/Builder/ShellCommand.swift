@@ -34,7 +34,9 @@ class ShellCommand {
             guard let self = self else { return }
             if let line = String(data: fileHandle.availableData, encoding: .utf8) {
                 progress?(line)
+                 #if DEBUG
                 print(line.replacingOccurrences(of: "\n", with: ""))
+                #endif
                 self.log += line
             }
         }

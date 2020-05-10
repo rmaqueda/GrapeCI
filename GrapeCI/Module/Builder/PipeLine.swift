@@ -27,12 +27,12 @@ struct PipeLine {
     }
 
     func run(completion: @escaping (PipeLineResult) -> Void) {
-        let pipeLine = pipeLineReplacingVariables(repository: self.repository, pullRequest: self.pullRequest)
-        let scriptPath = writeScipt(script: pipeLine)
-
+        let pipeLine = pipeLineReplacingVariables(repository: self.repository,
+                                                  pullRequest: self.pullRequest)
+        
         DispatchQueue.global(qos: .unspecified).async {
             do {
-                try self.shell.run(command: scriptPath) { result in
+                try self.shell.run(command: pipeLine) { result in
                     let result = PipeLineResult(status: result.status, log: result.output)
                     DispatchQueue.main.async {
                         completion(result)
@@ -62,23 +62,6 @@ struct PipeLine {
         script = script.replacingOccurrences(of: "$PROVIDER", with: repository.provider.rawValue.lowercased())
 
         return script
-    }
-
-    private func writeScipt(script: String) -> String {
-        let scriptPath = workingDir + "/script.sh"
-        do {
-            if FileManager.default.fileExists(atPath: scriptPath) {
-                try FileManager.default.removeItem(atPath: scriptPath)
-            }
-            let data = script.data(using: .utf8)
-            FileManager.default.createFile(atPath: scriptPath,
-                                           contents: data,
-                                           attributes: [FileAttributeKey.posixPermissions: 0o777])
-
-            return scriptPath
-        } catch {
-            fatalError("Error writing script.")
-        }
     }
 
 }

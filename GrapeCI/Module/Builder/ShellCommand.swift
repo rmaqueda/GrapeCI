@@ -17,8 +17,8 @@ struct ShellResult {
 class ShellCommand {
     private let workingDir: String
     private let isVerbose: Bool
-
     private var task: Process!
+    private var log = ""
 
     init(workingDir: String, isVerbose: Bool = false) {
         self.workingDir = workingDir
@@ -30,9 +30,12 @@ class ShellCommand {
              completion: @escaping ((ShellResult) -> Void)) throws {
 
         let outputPipe = Pipe()
-        outputPipe.fileHandleForReading.readabilityHandler = { fileHandle in
+        outputPipe.fileHandleForReading.readabilityHandler = { [weak self] fileHandle in
+            guard let self = self else { return }
             if let line = String(data: fileHandle.availableData, encoding: .utf8) {
                 progress?(line)
+                print(line)
+                self.log += line
             }
         }
 
@@ -44,10 +47,9 @@ class ShellCommand {
         task.standardOutput = outputPipe
         task.standardError = outputPipe
         task.currentDirectoryURL = URL(fileURLWithPath: workingDir)
-        task.terminationHandler = { proces in
-            let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
-            let output = String(decoding: outputData, as: UTF8.self)
-            let result = ShellResult(output: output, status: Int(proces.terminationStatus))
+        task.terminationHandler = { [weak self] proces in
+            guard let self = self else { return }
+            let result = ShellResult(output: self.log, status: Int(proces.terminationStatus))
             completion(result)
         }
 

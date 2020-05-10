@@ -65,7 +65,7 @@ class StatusPresenter: StatusPresenterProtocol {
                                                 infoText: "PR: " + pullRequest.title,
                                                 repositoryName: repository.name,
                                                 url: URL(string: pullRequest.link),
-                                                log: pullRequest.destination.lastCommit?.builds.last?.log)
+                                                log: pullRequest.destination.lastCommit?.builds.first?.log)
                 viewModels.append(viewModel)
             } else {
                 let viewModel = StatusViewModel(status: .none,

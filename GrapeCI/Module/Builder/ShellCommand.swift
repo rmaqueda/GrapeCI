@@ -17,7 +17,7 @@ struct ShellResult {
 class ShellCommand {
     private let workingDir: String
     private let isVerbose: Bool
-    private var task: Process!
+    private let task = Process()
     private var log = ""
 
     init(workingDir: String, isVerbose: Bool = false) {
@@ -34,14 +34,13 @@ class ShellCommand {
             guard let self = self else { return }
             if let line = String(data: fileHandle.availableData, encoding: .utf8) {
                 progress?(line)
-                 #if DEBUG
+                #if DEBUG
                 if line.count > 0 { print(line.replacingOccurrences(of: "\n", with: "")) }
                 #endif
                 self.log += line
             }
         }
 
-        task = Process()
         task.qualityOfService = .default
         task.launchPath = workingDir
         task.executableURL = URL(fileURLWithPath: "/bin/bash")

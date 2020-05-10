@@ -35,7 +35,7 @@ class ShellCommand {
             if let line = String(data: fileHandle.availableData, encoding: .utf8) {
                 progress?(line)
                  #if DEBUG
-                print(line.replacingOccurrences(of: "\n", with: ""))
+                if line.count > 0 { print(line.replacingOccurrences(of: "\n", with: "")) }
                 #endif
                 self.log += line
             }

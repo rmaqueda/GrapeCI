@@ -14,19 +14,33 @@ struct ShellResult {
     let status: Int
 }
 
+extension Notification.Name {
+    static let pipeCommandLog = Notification.Name("pipeCommandLog")
+}
+
 class ShellCommand {
     private let workingDir: String
     private let isVerbose: Bool
+
+    private var task: Process!
 
     init(workingDir: String, isVerbose: Bool = false) {
         self.workingDir = workingDir
         self.isVerbose = isVerbose
     }
 
-    func run(command: String) throws -> ShellResult {
-        let outputPipe = Pipe()
+    func run(command: String,
+             progress: ((String) -> Void)? = nil,
+             completion: @escaping ((ShellResult) -> Void)) throws {
 
-        let task = Process()
+        let outputPipe = Pipe()
+        outputPipe.fileHandleForReading.readabilityHandler = { fileHandle in
+            if let line = String(data: fileHandle.availableData, encoding: .utf8) {
+                progress?(line)
+            }
+        }
+
+        task = Process()
         task.qualityOfService = .default
         task.launchPath = workingDir
         task.executableURL = URL(fileURLWithPath: "/bin/bash")
@@ -34,13 +48,15 @@ class ShellCommand {
         task.standardOutput = outputPipe
         task.standardError = outputPipe
         task.currentDirectoryURL = URL(fileURLWithPath: workingDir)
+        task.terminationHandler = { proces in
+            let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
+            let output = String(decoding: outputData, as: UTF8.self)
+            let result = ShellResult(output: output, status: Int(proces.terminationStatus))
+
+            completion(result)
+        }
+
         try task.run()
-        task.waitUntilExit()
-
-        let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(decoding: outputData, as: UTF8.self)
-
-        return ShellResult(output: output, status: Int(task.terminationStatus))
     }
 
 }

@@ -15,7 +15,13 @@ class ShowLogViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Build log"
         textView.string = log ?? "Empty log"
     }
+
+    func updateLog(line: String) {
+        if textView.string == "Empty log" { textView.string = "" }
+        textView.string += line
+        textView.scrollToEndOfDocument(self)
+    }
+
 }

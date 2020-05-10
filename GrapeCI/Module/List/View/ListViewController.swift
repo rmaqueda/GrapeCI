@@ -46,6 +46,9 @@ class ListViewController: NSViewController {
     }
 
     private func createSubcriber() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimation(self)
+
         $searchText
             .removeDuplicates()
             .debounce(for: 1, scheduler: DispatchQueue.main)
@@ -79,6 +82,27 @@ class ListViewController: NSViewController {
         let repository = repositories[tableView.clickedRow]
         flowController?.loadIntegrationModule(repository: repository)
     }
+
+    func clear() {
+        repositoryNameTextField.stringValue = ""
+        presenter.fetchRepositories(nameFilter: "")
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: { [weak self] completion in
+                    guard let self = self else { return }
+                    if case let .failure(error) = completion {
+                        self.activityIndicator.isHidden = true
+                        self.showAlert(title: "Error", text: error.localizedDescription)
+                    }
+                },
+                receiveValue: { [weak self] repositories in
+                    guard let self = self else { return }
+                    self.repositories = repositories
+                    self.activityIndicator.isHidden = true
+                    self.tableView.reloadData()
+            })
+            .store(in: &subscriptions)
+    }
 }
 
 extension ListViewController: NSTextFieldDelegate {
@@ -86,7 +110,7 @@ extension ListViewController: NSTextFieldDelegate {
     func controlTextDidChange(_ obj: Notification) {
         if let textField = obj.object as? NSTextField {
             activityIndicator.isHidden = false
-            activityIndicator.startAnimation(nil)
+            activityIndicator.startAnimation(self)
             searchText = textField.stringValue
         }
     }

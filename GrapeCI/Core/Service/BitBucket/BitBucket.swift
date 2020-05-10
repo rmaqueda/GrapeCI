@@ -51,7 +51,7 @@ class BitBucket: OAuth2DataLoader {
         oauth2.authConfig.authorizeEmbeddedAutoDismiss = true
         oauth2.clientConfig.secretInBody = true
         oauth2.clientConfig.accessTokenAssumeUnexpired = false
-        oauth2.logger = OAuth2DebugLogger(.trace)
+        //oauth2.logger = OAuth2DebugLogger(.trace)
     }
 
     @discardableResult

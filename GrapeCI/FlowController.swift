@@ -126,7 +126,7 @@ class FlowController: FlowControllerProtocol {
 
     func didChangeIntegratedRepositories() {
         integrationViewController?.dismiss(self)
-        listViewController?.dismiss(self)
+        listViewController?.clear()
     }
 
     private func changeAppIcon(action: BuilderController.Action) {

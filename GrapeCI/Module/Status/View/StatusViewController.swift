@@ -68,8 +68,9 @@ class StatusViewController: NSViewController {
 
         let status = statusViews[row]
 
-        if tableView.clickedColumn == 0, let log = status.log {
+        if tableView.clickedColumn == 0, let log = status.log, log.count > 0 {
             let showLogVC = ShowLogViewController()
+            showLogVC.title = "Build log"
             showLogVC.log = log
             presentAsModalWindow(showLogVC)
         } else if let url = status.url {

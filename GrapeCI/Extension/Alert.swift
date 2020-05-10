@@ -22,4 +22,27 @@ extension NSViewController {
         alert.runModal()
     }
 
+    func showAlert(title: String,
+                   informativeText: String,
+                   confirmationTitle: String,
+                   cancelTitle: String,
+                   confirmationCompletion: (Bool) -> Void) {
+        let alert = NSAlert()
+        alert.messageText = title
+        alert.informativeText = informativeText
+        alert.alertStyle = .critical
+        alert.addButton(withTitle: confirmationTitle)
+        alert.addButton(withTitle: cancelTitle)
+        let modalResult = alert.runModal()
+
+        switch modalResult {
+        case .alertFirstButtonReturn:
+            confirmationCompletion(true)
+        case .alertSecondButtonReturn:
+            confirmationCompletion(false)
+        default:
+            confirmationCompletion(false)
+        }
+    }
+
 }

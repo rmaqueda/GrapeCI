@@ -31,8 +31,7 @@ struct PipeLine {
 
         DispatchQueue.global(qos: .unspecified).async {
             do {
-                let result = try shell.run(command: scriptPath)
-                DispatchQueue.main.async {
+                try shell.run(command: scriptPath) { result in
                     let result = PipeLineResult(status: result.status, log: result.output)
                     completion(result)
                 }

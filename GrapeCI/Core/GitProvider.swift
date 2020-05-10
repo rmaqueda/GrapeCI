@@ -178,6 +178,8 @@ class GitProvider: GitProviderProtocol {
         }
     }
 
+    // TODO: Find a better way to retain the shell command instead this array.
+    private var cloneShellCommands: [ShellCommand?] = []
     func integrate(repository: GitRepository,
                    progress: @escaping (String) -> Void,
                    completion: @escaping (ShellResult) -> Void) {
@@ -185,21 +187,20 @@ class GitProvider: GitProviderProtocol {
 
         if !FileManager.default.fileExists(atPath: repository.directory) {
             let authString = aouthString(for: repository)
-            repository.clone(
-                authString: authString,
-                progress: progress,
-                completion: { result in
-                    if result.status == 0 {
-                        self.insertIntegrateRepository(repository: repository)
-                    } else {
-                        try? repository.deleteRepositoryDir()
-                        fatalError("Error cloning repository")
-                    }
-                    completion(result)
+            let clone = repository.clone(authString: authString, progress: progress, completion: { result in
+                if result.status == 0 {
+                    self.insertIntegrateRepository(repository: repository)
+                } else {
+                    try? repository.deleteRepositoryDir()
+                    fatalError("Error cloning repository")
+                }
+                completion(result)
             })
+            cloneShellCommands.append(clone)
         } else {
             insertIntegrateRepository(repository: repository)
         }
+
     }
 
     private func insertIntegrateRepository(repository: GitRepository) {

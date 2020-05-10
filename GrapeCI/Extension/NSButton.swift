@@ -12,7 +12,7 @@ import AppKit
 class NSButtonBlock: NSButton {
     private var completion: () -> Void
 
-    init(title: String, completion: @escaping (() -> Void)) {
+    init(title: String, completion: @escaping () -> Void) {
         self.completion = completion
         super.init(frame: .zero)
 

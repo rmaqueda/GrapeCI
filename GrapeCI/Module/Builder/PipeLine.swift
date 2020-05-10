@@ -32,12 +32,12 @@ struct PipeLine {
 
         DispatchQueue.global(qos: .unspecified).async {
             do {
-                try self.shell.run(command: pipeLine) { result in
+                try self.shell.run(command: pipeLine, progress: { _ in }, completion: { result in
                     let result = PipeLineResult(status: result.status, log: result.output)
                     DispatchQueue.main.async {
                         completion(result)
                     }
-                }
+                })
             } catch {
                 print(error)
                 DispatchQueue.main.async {

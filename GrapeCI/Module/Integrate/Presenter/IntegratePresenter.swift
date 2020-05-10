@@ -38,17 +38,9 @@ class IntegratePresenter: IntegratePresenterProtocol {
                    completion: @escaping (ShellResult) -> Void) {
         if pipeline != repository.pipeline {
             repository.pipeline = pipeline
-            integrateInterator.integrate(
-                repository: repository,
-                progress: { log in
-                    DispatchQueue.main.async {
-                        progress(log)
-                    }},
-                completion: { resutl in
-                    DispatchQueue.main.async {
-                        completion(resutl)
-                    }
-            })
+            integrateInterator.integrate(repository: repository,
+                                         progress: progress,
+                                         completion: completion)
         } else {
             completion(ShellResult(output: "", status: 0))
         }

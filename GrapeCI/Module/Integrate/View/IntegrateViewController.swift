@@ -11,7 +11,7 @@ import Cocoa
 class IntegrateViewController: NSViewController {
     private var presenter: IntegratePresenterProtocol
     private weak var flowController: FlowControllerProtocol?
-    var logView: ShowLogViewController?
+    private let logView = ShowLogViewController()
 
     @IBOutlet weak var repositoryNameLabel: NSTextField!
     @IBOutlet weak var pipelineTextView: NSTextView!
@@ -43,26 +43,20 @@ class IntegrateViewController: NSViewController {
     }
 
     @IBAction func didPressSave(_ sender: Any) {
+        presentAsSheet(logView)
+
         if pipelineTextView.string.count > 0 {
             presenter.integrate(
                 pipeline: pipelineTextView.string,
                 progress: { [weak self] log in
-                    guard let self = self else { return }
-                    if self.logView == nil {
-                        self.logView = ShowLogViewController()
-                        self.presentAsSheet(self.logView!)
-                    }
-                    self.logView?.updateLog(line: "\(log)\n") },
+                    self?.logView.updateLog(line: "\(log)\n") },
                 completion: { [weak self] result in
                     guard let self = self else { return }
-                    if result.status == 0 {
-                        if let logView = self.logView {
-                            self.dismiss(logView)
-                        }
-                    } else {
+                    self.dismiss(self.logView)
+                    if result.status != 0 {
                         self.showAlert(title: "Clone Error",
-                                        informativeText: "Error cloning repository.",
-                                        buttonTitle: "OK")
+                                       informativeText: "Error cloning repository.",
+                                       buttonTitle: "OK")
                     }
                     self.flowController?.didChangeIntegratedRepositories()
             })

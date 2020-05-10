@@ -18,6 +18,7 @@ class ShellCommand {
     private let workingDir: String
     private let isVerbose: Bool
     private let task = Process()
+    private let outputPipe = Pipe()
     private var log = ""
 
     init(workingDir: String, isVerbose: Bool = false) {
@@ -26,14 +27,15 @@ class ShellCommand {
     }
 
     func run(command: String,
-             progress: ((String) -> Void)? = nil,
-             completion: @escaping ((ShellResult) -> Void)) throws {
+             progress: @escaping (String) -> Void,
+             completion: @escaping (ShellResult) -> Void) throws {
 
-        let outputPipe = Pipe()
         outputPipe.fileHandleForReading.readabilityHandler = { [weak self] fileHandle in
             guard let self = self else { return }
             if let line = String(data: fileHandle.availableData, encoding: .utf8) {
-                progress?(line)
+                DispatchQueue.main.sync {
+                    progress(line)
+                }
                 #if DEBUG
                 if line.count > 0 { print(line.replacingOccurrences(of: "\n", with: "")) }
                 #endif
@@ -51,7 +53,9 @@ class ShellCommand {
         task.terminationHandler = { [weak self] proces in
             guard let self = self else { return }
             let result = ShellResult(output: self.log, status: Int(proces.terminationStatus))
-            completion(result)
+            DispatchQueue.main.sync {
+                completion(result)
+            }
         }
 
         try task.run()

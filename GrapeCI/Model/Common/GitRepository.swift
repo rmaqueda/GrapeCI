@@ -56,7 +56,7 @@ extension GitRepository {
 
     func clone(authString: String,
                progress: @escaping (String) -> Void,
-               completion: @escaping (ShellResult) -> Void) {
+               completion: @escaping (ShellResult) -> Void) -> ShellCommand {
         if !FileManager.default.fileExists(atPath: Constants.mainDirectory) {
             do {
                 try FileManager.default.createDirectory(atPath: Constants.mainDirectory,
@@ -94,17 +94,19 @@ extension GitRepository {
                             completion(result)
             })
         }
+
+        return shell
     }
 
     func updateOrigin(authString: String) {
         let shell = ShellCommand(workingDir: directory, isVerbose: true)
         let command = "git remote set-url origin https://\(authString)@\(provider.url)/\(fullName).git"
 
-        try? shell.run(command: command) { resutl in
+        try? shell.run(command: command, progress: { _ in }, completion: { resutl in
             if resutl.status != 0 {
                 fatalError("Error updating repository origin.")
             }
-        }
+        })
     }
 
     func deleteRepositoryDir() throws {

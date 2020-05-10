@@ -205,7 +205,7 @@ public class SpyGitProviderProtocol: GitProviderProtocol, TestSpy {
         callstack.record(.integratedRepositories)
         return integratedRepositoriesResult
     }
-    public func integrate(repository: GitRepository) {
+    public func integrate(repository: GitRepository,                   progress: @escaping (String) -> Void,                   completion: @escaping (ShellResult) -> Void) {
         callstack.record(.integrate(repository: repository ))
     }
     public func deIntegrate(repository: GitRepository) {
@@ -244,7 +244,7 @@ public class SpyIntegrateInteractorProtocol: IntegrateInteractorProtocol, TestSp
 	}
 	public var callstack = CallstackContainer<Method>()
     public init() {}
-    public func integrate(repository: GitRepository) {
+    public func integrate(repository: GitRepository,                   progress: @escaping (String) -> Void,                   completion: @escaping (ShellResult) -> Void) {
         callstack.record(.integrate(repository: repository ))
     }
     public func deIntegrate(repository: GitRepository) {
@@ -280,7 +280,7 @@ public class SpyIntegratePresenterProtocol: IntegratePresenterProtocol, TestSpy 
     public var underlyingDeIntegrateButtonTitle: String!
 	public var callstack = CallstackContainer<Method>()
     public init() {}
-    public func integrate(pipeline: String) {
+    public func integrate(pipeline: String,                   progress: @escaping (String) -> Void,                   completion: @escaping (ShellResult) -> Void) {
         callstack.record(.integrate(pipeline: pipeline ))
     }
     public func deIntegrate() {

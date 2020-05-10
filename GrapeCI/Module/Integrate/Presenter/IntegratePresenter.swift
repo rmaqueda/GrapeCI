@@ -33,10 +33,16 @@ class IntegratePresenter: IntegratePresenterProtocol {
         self.integrateInterator = integrateInterator
     }
 
-    func integrate(pipeline: String) {
+    func integrate(pipeline: String,
+                   progress: @escaping (String) -> Void,
+                   completion: @escaping (ShellResult) -> Void) {
         if pipeline != repository.pipeline {
             repository.pipeline = pipeline
-            integrateInterator.integrate(repository: repository)
+            integrateInterator.integrate(repository: repository,
+                                         progress: progress,
+                                         completion: completion)
+        } else {
+            completion(ShellResult(output: "", status: 0))
         }
     }
 

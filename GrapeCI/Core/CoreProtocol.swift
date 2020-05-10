@@ -25,7 +25,9 @@ protocol GitProviderProtocol {
 
     func handleOauthRedirectURL(_ url: URL)
     func integratedRepositories() -> [GitRepository]
-    func integrate(repository: GitRepository)
+    func integrate(repository: GitRepository,
+                   progress: @escaping (String) -> Void,
+                   completion: @escaping (ShellResult) -> Void)
     func deIntegrate(repository: GitRepository)
 
     func aouthString(for repository: GitRepository) -> String

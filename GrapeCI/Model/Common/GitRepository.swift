@@ -54,7 +54,9 @@ class GitRepository: Equatable {
 
 extension GitRepository {
 
-    func clone(authString: String) {
+    func clone(authString: String,
+               progress: @escaping (String) -> Void,
+               completion: @escaping (ShellResult) -> Void) -> ShellCommand {
         if !FileManager.default.fileExists(atPath: Constants.mainDirectory) {
             do {
                 try FileManager.default.createDirectory(atPath: Constants.mainDirectory,
@@ -81,24 +83,33 @@ extension GitRepository {
 
         print("Cloning repository: \(command)")
 
-        let clone = try? shell.run(command: command)
-        if clone?.status != 0 {
-            try? deleteRepositoryDir()
-            fatalError("Error cloning repository.")
+        DispatchQueue.global(qos: .background).async {
+            try? shell.run(command: command,
+                           progress: progress,
+                           completion: { result in
+                            if result.status != 0 {
+                                try? self.deleteRepositoryDir()
+                                fatalError("Error cloning repository.")
+                            }
+                            completion(result)
+            })
         }
+
+        return shell
     }
 
     func updateOrigin(authString: String) {
         let shell = ShellCommand(workingDir: directory, isVerbose: true)
         let command = "git remote set-url origin https://\(authString)@\(provider.url)/\(fullName).git"
 
-        let update = try? shell.run(command: command)
-        if update?.status != 0 {
-            fatalError("Error updating repository origin.")
-        }
+        try? shell.run(command: command, progress: { _ in }, completion: { resutl in
+            if resutl.status != 0 {
+                fatalError("Error updating repository origin.")
+            }
+        })
     }
 
-    private func deleteRepositoryDir() throws {
+    func deleteRepositoryDir() throws {
         if FileManager.default.fileExists(atPath: directory) {
             try FileManager.default.removeItem(atPath: directory)
         }

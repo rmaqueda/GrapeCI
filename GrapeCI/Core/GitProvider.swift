@@ -178,13 +178,32 @@ class GitProvider: GitProviderProtocol {
         }
     }
 
-    func integrate(repository: GitRepository) {
+    // TODO: Find a better way to retain the shell command instead this array.
+    private var cloneShellCommands: [ShellCommand?] = []
+    func integrate(repository: GitRepository,
+                   progress: @escaping (String) -> Void,
+                   completion: @escaping (ShellResult) -> Void) {
         precondition(repository.pipeline != nil, "The pipeline must not be empty")
 
-        // TODO: clone with progress
-        let authString = aouthString(for: repository)
-        repository.clone(authString: authString)
+        if !FileManager.default.fileExists(atPath: repository.directory) {
+            let authString = aouthString(for: repository)
+            let clone = repository.clone(authString: authString, progress: progress, completion: { result in
+                if result.status == 0 {
+                    self.insertIntegrateRepository(repository: repository)
+                } else {
+                    try? repository.deleteRepositoryDir()
+                    fatalError("Error cloning repository")
+                }
+                completion(result)
+            })
+            cloneShellCommands.append(clone)
+        } else {
+            insertIntegrateRepository(repository: repository)
+        }
 
+    }
+
+    private func insertIntegrateRepository(repository: GitRepository) {
         let query: NSFetchRequest<IntegratedRepository> = IntegratedRepository.fetchRequest()
         query.predicate = NSPredicate(format: "identifier==%@", repository.identifier)
 
@@ -202,7 +221,6 @@ class GitProvider: GitProviderProtocol {
         } catch {
             fatalError(error.localizedDescription)
         }
-
     }
 
     func aouthString(for repository: GitRepository) -> String {
@@ -226,6 +244,9 @@ class GitProvider: GitProviderProtocol {
 
         do {
             try coreData.viewContext.save()
+            if FileManager.default.fileExists(atPath: repository.directory) {
+                try FileManager.default.removeItem(atPath: repository.directory)
+            }
         } catch {
             fatalError(error.localizedDescription)
         }

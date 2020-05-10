@@ -10,7 +10,8 @@ import Foundation
 import Combine
 
 class BuilderController {
-    private var workInProgress = false
+    private var pipeline: PipeLine?
+
     private let gitProvider: GitProviderProtocol
     private var subscriptions = Set<AnyCancellable>()
     private var publisher = PassthroughSubject<Action, Never>()
@@ -25,14 +26,14 @@ class BuilderController {
     }
 
     func buildIfNeeded(repositories: [GitRepository]) {
-        guard !workInProgress else {
+        guard pipeline == nil else {
             Swift.print("Work in progress, exit for now.")
             return
         }
 
         for repository in repositories {
             //TODO: Remove after finish testing integrations.
-            guard !repository.fullName.contains("tda") else {  continue }
+            guard !repository.fullName.contains("tda") else { continue }
 
             if let builds = repository.defaultBranch.lastCommit?.builds, buildIsNeeded(builds: builds) {
                 runPipeLine(repository: repository)
@@ -54,16 +55,15 @@ class BuilderController {
     }
 
     private func runPipeLine(repository: GitRepository, pullRequest: GitPullRequest? = nil) {
-        workInProgress = true
         publisher.send(.buildStart(repository: repository))
 
         let oauthString = gitProvider.aouthString(for: repository)
         repository.updateOrigin(authString: oauthString)
 
         Swift.print(message(repository: repository, pullRequest: pullRequest))
-        let pipeline = PipeLine(repository: repository, pullRequest: pullRequest)
+        pipeline = PipeLine(repository: repository, pullRequest: pullRequest)
 
-        pipeline.run { [weak self] result in
+        pipeline?.run { [weak self] result in
             guard let self = self else { return }
             Swift.print(self.message(repository: repository, pullRequest: pullRequest, result: result))
             self.createBuild(repository: repository, pullRequest: pullRequest, result: result)
@@ -104,10 +104,11 @@ class BuilderController {
         }
 
         gitProvider.createBuild(repository: repository, commit: commit, state: buildStatus)
+            .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] _ in
                     guard let self = self else { return }
-                    self.workInProgress = false
+                    self.pipeline = nil
                     self.publisher.send(.buildFinish(status: buildStatus))
                 },
                 receiveValue: { [weak self] build in
@@ -115,9 +116,8 @@ class BuilderController {
                     self.gitProvider.saveBuildLog(buildId: build.key,
                                                   providerName: repository.provider.rawValue,
                                                   log: result.log)
-            }
-        )
-            .store(in: &subscriptions)
+                }
+        ).store(in: &subscriptions)
     }
 
 }

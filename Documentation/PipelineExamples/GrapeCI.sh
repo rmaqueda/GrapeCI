@@ -44,7 +44,7 @@ echo ""
 swiftlint lint --quiet --reporter json $SOURCES_DIR > swiftlint.json || true
 
 # Generate Cobertura files
-xccov-to-sonarqube-generic.sh $BUILD_DIR/Logs/Test/*.xcresult/ > cobertura.xml
+xccov-to-sonarqube-generic.sh $BUILD_DIR/Logs/Test/*.xcresult/ > cobertura.xml || true
 #slather coverage --cobertura-xml --scheme $SCHEME --output-directory . --build-directory $BUILD_DIR $PROJECT.xcodeproj
 
 # Upload to Sonar Cloud
@@ -65,7 +65,7 @@ sonar-scanner \
     -Dsonar.language=swift \
     -Dsonar.coverageReportPaths=cobertura.xml \
     -Dsonar.swift.coverage.reportPattern=cobertura.xml \
-    -Dsonar.swift.swiftLint.reportPaths=swiftlint.json
+    -Dsonar.swift.swiftLint.reportPaths=swiftlint.json || true
 
 else
 
@@ -79,7 +79,7 @@ sonar-scanner \
     -Dsonar.language=swift \
     -Dsonar.coverageReportPaths=cobertura.xml \
     -Dsonar.swift.coverage.reportPattern=cobertura.xml \
-    -Dsonar.swift.swiftLint.reportPaths=swiftlint.json
+    -Dsonar.swift.swiftLint.reportPaths=swiftlint.json || true
     
 fi
 

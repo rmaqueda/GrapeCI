@@ -15,8 +15,12 @@ class IntegrateInteractor: IntegrateInteractorProtocol {
         self.gitProvider = gitProvider
     }
 
-    func integrate(repository: GitRepository) {
-        gitProvider.integrate(repository: repository)
+    func integrate(repository: GitRepository,
+                   progress: @escaping (String) -> Void,
+                   completion: @escaping (ShellResult) -> Void) {
+        gitProvider.integrate(repository: repository,
+                              progress: progress,
+                              completion: completion)
     }
 
     func deIntegrate(repository: GitRepository) {

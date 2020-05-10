@@ -16,12 +16,17 @@ protocol IntegratePresenterProtocol {
     var buttonTitle: String { get }
     var deIntegrateButtonTitle: String { get }
 
-    func integrate(pipeline: String)
+    func integrate(pipeline: String,
+                   progress: @escaping (String) -> Void,
+                   completion: @escaping (ShellResult) -> Void)
     func deIntegrate()
 }
 
 // sourcery: autoSpy
 protocol IntegrateInteractorProtocol {
-    func integrate(repository: GitRepository)
+    func integrate(repository: GitRepository,
+                   progress: @escaping (String) -> Void,
+                   completion: @escaping (ShellResult) -> Void)
+
     func deIntegrate(repository: GitRepository)
 }

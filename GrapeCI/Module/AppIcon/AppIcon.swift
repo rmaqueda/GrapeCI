@@ -60,7 +60,9 @@ class AppIcon {
         case .failed:
             button.image = NSImage(named: "failure")
         }
-
+        #if DEBUG
+        button.image = button.image?.tint(color: NSColor.red.withAlphaComponent(0.6))
+        #endif
     }
 
 }

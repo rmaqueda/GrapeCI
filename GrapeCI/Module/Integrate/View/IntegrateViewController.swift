@@ -11,6 +11,7 @@ import Cocoa
 class IntegrateViewController: NSViewController {
     private var presenter: IntegratePresenterProtocol
     private weak var flowController: FlowControllerProtocol?
+    private let logView = ShowLogViewController()
 
     @IBOutlet weak var repositoryNameLabel: NSTextField!
     @IBOutlet weak var pipelineTextView: NSTextView!
@@ -42,18 +43,39 @@ class IntegrateViewController: NSViewController {
     }
 
     @IBAction func didPressSave(_ sender: Any) {
+        presentAsSheet(logView)
+
         if pipelineTextView.string.count > 0 {
-            presenter.integrate(pipeline: pipelineTextView.string)
-            flowController?.didChangeIntegratedRepositories()
+            presenter.integrate(
+                pipeline: pipelineTextView.string,
+                progress: { [weak self] log in
+                    self?.logView.updateLog(line: "\(log)\n") },
+                completion: { [weak self] result in
+                    guard let self = self else { return }
+                    self.dismiss(self.logView)
+                    if result.status != 0 {
+                        self.showAlert(title: "Clone Error",
+                                       informativeText: "Error cloning repository.",
+                                       buttonTitle: "OK")
+                    }
+                    self.flowController?.didChangeIntegratedRepositories()
+            })
         } else {
-            // TODO: Show empty pipeline warning?
+            showAlert(
+                title: "Empty build script.",
+                informativeText: "The build script cannot be empty.",
+                buttonTitle: "OK")
         }
     }
 
     @IBAction func didPressDeIntegrate(_ sender: Any) {
-        // TODO: Show confirmation dialog?
-        presenter.deIntegrate()
-        flowController?.didChangeIntegratedRepositories()
+        showAlert(title: "Deintegrate Repository?",
+                  informativeText: "The pipeline of this repository will delete!",
+                  confirmationTitle: "OK",
+                  cancelTitle: "Cancel") { confirmation in
+                    if confirmation { presenter.deIntegrate() }
+                    flowController?.didChangeIntegratedRepositories()
+        }
     }
 
 }

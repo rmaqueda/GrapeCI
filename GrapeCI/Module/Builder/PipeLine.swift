@@ -17,25 +17,27 @@ struct PipeLine {
     private let workingDir: String
     private let repository: GitRepository
     private let pullRequest: GitPullRequest?
+    private let shell: ShellCommand
 
     init(repository: GitRepository, pullRequest: GitPullRequest?) {
         self.repository = repository
         self.pullRequest = pullRequest
         self.workingDir = repository.directory
+        self.shell = ShellCommand(workingDir: workingDir)
     }
 
     func run(completion: @escaping (PipeLineResult) -> Void) {
-        let pipeLine = pipeLineReplacingVariables(repository: self.repository, pullRequest: self.pullRequest)
-        let scriptPath = writeScipt(script: pipeLine)
-        let shell = ShellCommand(workingDir: workingDir)
+        let pipeLine = pipeLineReplacingVariables(repository: self.repository,
+                                                  pullRequest: self.pullRequest)
 
         DispatchQueue.global(qos: .unspecified).async {
             do {
-                let result = try shell.run(command: scriptPath)
-                DispatchQueue.main.async {
+                try self.shell.run(command: pipeLine, progress: { _ in }, completion: { result in
                     let result = PipeLineResult(status: result.status, log: result.output)
-                    completion(result)
-                }
+                    DispatchQueue.main.async {
+                        completion(result)
+                    }
+                })
             } catch {
                 print(error)
                 DispatchQueue.main.async {
@@ -60,21 +62,6 @@ struct PipeLine {
         script = script.replacingOccurrences(of: "$PROVIDER", with: repository.provider.rawValue.lowercased())
 
         return script
-    }
-
-    private func writeScipt(script: String) -> String {
-        let scriptPath = workingDir + "/script.sh"
-        do {
-            if FileManager.default.fileExists(atPath: scriptPath) {
-                    try FileManager.default.removeItem(atPath: scriptPath)
-            }
-            let data = script.data(using: .utf8)
-            FileManager.default.createFile(atPath: script, contents: data, attributes: nil)
-
-            return script
-        } catch {
-            fatalError("Error writing script.")
-        }
     }
 
 }

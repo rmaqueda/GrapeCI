@@ -20,10 +20,10 @@ enum Secrets {
         static let clientSecret = Secrets.environmentVariable(named: "BITBUCKET_CLIENT_SECRET")
     }
 
+    // See installatin instuctions here: https://github.com/rmaqueda/GrapeCI#how-to-install
     fileprivate static func environmentVariable(named: String) -> String {
         let processInfo = ProcessInfo.processInfo
         guard let value = processInfo.environment[named], value.count > 0 else {
-            //TODO: Include documentation URL
             if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
                 return ""
             } else {

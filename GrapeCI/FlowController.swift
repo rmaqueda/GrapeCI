@@ -84,18 +84,18 @@ class FlowController: FlowControllerProtocol {
         let presenter = WelcomePresenter(interactor: interactor)
         let welcomeView = WelcomeView(presenter: presenter, flowController: self)
 
-        let loginWindow = ClosableWindow(
+        let configWindow = ClosableWindow(
             contentRect: NSRect(x: 0, y: 0, width: 500, height: 500),
             styleMask: [.titled, .closable],
             backing: .buffered,
             defer: false)
 
-        gitProvider.authenticateView = loginWindow
+        gitProvider.authenticateView = configWindow
 
-        loginWindow.setFrameAutosaveName("Configuration Window")
-        loginWindow.center()
-        loginWindow.contentView = NSHostingView(rootView: welcomeView)
-        loginWindow.makeKeyAndOrderFront(loginWindow)
+        configWindow.setFrameAutosaveName("Configuration Window")
+        configWindow.center()
+        configWindow.contentView = NSHostingView(rootView: welcomeView)
+        configWindow.makeKeyAndOrderFront(configWindow)
 
         NSApp.activate(ignoringOtherApps: true)
     }
@@ -126,7 +126,7 @@ class FlowController: FlowControllerProtocol {
 
     func didChangeIntegratedRepositories() {
         integrationViewController?.dismiss(self)
-        listViewController?.dismiss(self)
+        listViewController?.clear()
     }
 
     private func changeAppIcon(action: BuilderController.Action) {

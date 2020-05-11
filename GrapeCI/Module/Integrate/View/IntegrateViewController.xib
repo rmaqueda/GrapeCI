@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="783" height="734"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" allowsUndo="YES" id="X1O-Ef-g8i">
+                            <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" allowsUndo="YES" id="X1O-Ef-g8i" customClass="EditableNSTextField" customModule="GrapeCI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="783" height="734"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>

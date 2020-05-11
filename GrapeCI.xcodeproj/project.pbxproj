@@ -23,6 +23,7 @@
 		743201CB2457FC5C00EEDE54 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743201CA2457FC5C00EEDE54 /* GitHubUser.swift */; };
 		7496C3E2246513CD00990BEB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496C3E1246513CD00990BEB /* Alert.swift */; };
 		7496C3E42465156700990BEB /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496C3E32465156700990BEB /* NSButton.swift */; };
+		74A9E8302469357000184F25 /* EditableNSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9E82F2469357000184F25 /* EditableNSTextField.swift */; };
 		74BDAF66246167400007E63E /* LoggedProvider+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDAF64246167400007E63E /* LoggedProvider+CoreDataClass.swift */; };
 		74BDAF67246167400007E63E /* LoggedProvider+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDAF65246167400007E63E /* LoggedProvider+CoreDataProperties.swift */; };
 		74FADBC7245BD7050011AFF7 /* OAuth2DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FADBC6245BD7050011AFF7 /* OAuth2DataLoader.swift */; };
@@ -168,6 +169,7 @@
 		743201CA2457FC5C00EEDE54 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
 		7496C3E1246513CD00990BEB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		7496C3E32465156700990BEB /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
+		74A9E82F2469357000184F25 /* EditableNSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableNSTextField.swift; sourceTree = "<group>"; };
 		74BDAF64246167400007E63E /* LoggedProvider+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedProvider+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74BDAF65246167400007E63E /* LoggedProvider+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedProvider+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74FADBC6245BD7050011AFF7 /* OAuth2DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2DataLoader.swift; sourceTree = "<group>"; };
@@ -770,6 +772,7 @@
 				74267B46245E92A90060D2F8 /* ZipCollection.swift */,
 				7496C3E1246513CD00990BEB /* Alert.swift */,
 				7496C3E32465156700990BEB /* NSButton.swift */,
+				74A9E82F2469357000184F25 /* EditableNSTextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1050,6 +1053,7 @@
 				8C1C68A72427D72F008C6176 /* GitProvider.swift in Sources */,
 				8CDE7AA5243B83EC0087F61F /* IntegrateInteractor.swift in Sources */,
 				743201CB2457FC5C00EEDE54 /* GitHubUser.swift in Sources */,
+				74A9E8302469357000184F25 /* EditableNSTextField.swift in Sources */,
 				74BDAF67246167400007E63E /* LoggedProvider+CoreDataProperties.swift in Sources */,
 				8C1C68BF242869CE008C6176 /* Provider.swift in Sources */,
 				8CAD2FB42440522000969D76 /* StatusViewController.swift in Sources */,

@@ -10,7 +10,7 @@ TESTS_DIR="GrapeCITests"
 BUILD_DIR="build"
 
 SONAR_URL="https://sonarcloud.io"
-SONAR_LOGIN="sonar-key-here"
+SONAR_LOGIN="sonar_secret_here"
 SONAR_ORGANIZATION="rmaqueda-github"
 
 # Git Clean and Check out
@@ -37,7 +37,7 @@ clean build test | xcpretty --test --no-color
 swiftlint lint --quiet --reporter json $SOURCES_DIR > swiftlint.json || true
 
 # Generate Cobertura files
-slather coverage --sonarqube-xml --scheme GrapeCI --output-directory . --build-directory build GrapeCI.xcodeproj || true
+slather coverage --sonarqube-xml --scheme $SCHEME --output-directory . --build-directory build $PROJECT.xcodeproj || true
 
 # Upload to Sonar Cloud
 if [ -n "$PR_BRANCH" ]; then

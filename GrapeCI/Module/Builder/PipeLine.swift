@@ -56,8 +56,8 @@ struct PipeLine {
             return script
         }
 
-        script = script.replacingOccurrences(of: "$PR_BRANCH", with: pullRequest.destination.name)
-        script = script.replacingOccurrences(of: "$PR_BASE", with: pullRequest.origin.name)
+        script = script.replacingOccurrences(of: "$PR_BRANCH", with: pullRequest.origin.name)
+        script = script.replacingOccurrences(of: "$PR_BASE", with: pullRequest.destination.name)
         script = script.replacingOccurrences(of: "$PR_ID", with: String(pullRequest.number))
         script = script.replacingOccurrences(of: "$PROVIDER", with: repository.provider.rawValue.lowercased())
 

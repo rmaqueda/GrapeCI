@@ -107,7 +107,8 @@ extension StatusViewController: NSTableViewDelegate {
             cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "StatusCell"),
                                       owner: self) as? NSTableCellView
 
-            cell?.imageView?.image = NSImage(named: NSImage.Name(statusView.status.rawValue))
+            let image = NSImage(named: NSImage.Name(statusView.status.rawValue))
+            cell?.imageView?.image = image
         } else if column == "InfoColumn" {
             cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "InfoCell"),
                                                owner: self) as? NSTableCellView

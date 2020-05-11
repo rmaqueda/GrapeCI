@@ -199,6 +199,7 @@ class GitProvider: GitProviderProtocol {
             cloneShellCommands.append(clone)
         } else {
             insertIntegrateRepository(repository: repository)
+            completion(ShellResult(output: "", status: 0))
         }
 
     }

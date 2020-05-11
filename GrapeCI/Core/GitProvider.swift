@@ -319,10 +319,10 @@ class GitProvider: GitProviderProtocol {
         let publishers = Publishers.Sequence<[AnyPublisher<GitRepository, Error>], Error>(sequence:
             repository.pullRequests.map { pullRequest in
                 gitProvider(for: repository.provider)
-                    .flatMap({ $0.builds(repository: repository, commit: pullRequest.destination.lastCommit!.sha) })
+                    .flatMap({ $0.builds(repository: repository, commit: pullRequest.origin.lastCommit!.sha) })
                     .map({ builds in
                         let buildsWithLog = builds.map { self.addLog(for: repository, to: $0) }
-                        pullRequest.destination.lastCommit?.builds = buildsWithLog
+                        pullRequest.origin.lastCommit?.builds = buildsWithLog
                         return repository
                     })
                     .eraseToAnyPublisher()

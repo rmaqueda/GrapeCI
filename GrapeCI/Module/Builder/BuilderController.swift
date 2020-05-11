@@ -41,7 +41,7 @@ class BuilderController {
             }
 
             for pullRequest in repository.pullRequests {
-                if let builds = pullRequest.destination.lastCommit?.builds, buildIsNeeded(builds: builds) {
+                if let builds = pullRequest.origin.lastCommit?.builds, buildIsNeeded(builds: builds) {
                     runPipeLine(repository: repository, pullRequest: pullRequest)
                     break
                 }
@@ -95,7 +95,7 @@ class BuilderController {
         var commit: GitCommit
         let buildStatus: GitBuildState = result.status == 0 ? .success : .failed
 
-        if let pullRequest = pullRequest, let lastCommit = pullRequest.destination.lastCommit {
+        if let pullRequest = pullRequest, let lastCommit = pullRequest.origin.lastCommit {
             commit = lastCommit
         } else if let lastCommit = repository.defaultBranch.lastCommit {
             commit = lastCommit

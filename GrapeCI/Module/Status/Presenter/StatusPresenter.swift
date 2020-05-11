@@ -59,13 +59,13 @@ class StatusPresenter: StatusPresenterProtocol {
         var viewModels: [StatusViewModel] = []
 
         repository.pullRequests.forEach { pullRequest in
-            if let builds = pullRequest.destination.lastCommit?.builds, builds.count > 0 {
+            if let builds = pullRequest.origin.lastCommit?.builds, builds.count > 0 {
                 let viewModel = StatusViewModel(status: buildState(for: builds),
                                                 provider: repository.provider,
                                                 infoText: "PR: " + pullRequest.title,
                                                 repositoryName: repository.name,
                                                 url: URL(string: pullRequest.link),
-                                                log: pullRequest.destination.lastCommit?.builds.first?.log)
+                                                log: pullRequest.origin.lastCommit?.builds.first?.log)
                 viewModels.append(viewModel)
             } else {
                 let viewModel = StatusViewModel(status: .none,
@@ -82,7 +82,7 @@ class StatusPresenter: StatusPresenterProtocol {
     }
 
     private func buildState(for builds: [GitBuild]?) -> GitBuildState {
-        guard let builds = builds else { return .none }
+        guard let builds = builds, builds.count > 0 else { return .none }
 
         if builds.contains(where: { $0.state == .success }) {
             return .success

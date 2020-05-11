@@ -12,8 +12,8 @@ class GitPullRequest {
     let identifier: String
     let title: String
     let number: Int
-    let origin: GitBranch
-    var destination: GitBranch
+    var origin: GitBranch
+    let destination: GitBranch
     let link: String
 
     init (identifier: String,

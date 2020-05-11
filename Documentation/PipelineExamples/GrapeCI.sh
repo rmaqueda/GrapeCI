@@ -1,5 +1,5 @@
 #!/bin/bash
-export PATH=/Users/ricardomaqueda/.gem/ruby/2.6.0/bin:/usr/local/opt/libressl/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ricardomaqueda/Library/Python/2.7/bin/:/usr/local/sbin/
+export PATH=/usr/local/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH
 set -e -x -o pipefail
 
 # Set Variables
@@ -10,14 +10,8 @@ TESTS_DIR="GrapeCITests"
 BUILD_DIR="build"
 
 SONAR_URL="https://sonarcloud.io"
-SONAR_LOGIN="sonar_secret_here"
+SONAR_LOGIN="sonar-key-here"
 SONAR_ORGANIZATION="rmaqueda-github"
-
-# Common
-rm -f swiftlint.json
-rm -f cobertura.xml
-rm -f lizard.xml
-rm -f tailor.txt
 
 # Git Clean and Check out
 git clean -f -d
@@ -39,13 +33,11 @@ xcodebuild \
 -enableCodeCoverage YES \
 clean build test | xcpretty --test --no-color
 
-echo ""
 # Lint
 swiftlint lint --quiet --reporter json $SOURCES_DIR > swiftlint.json || true
 
 # Generate Cobertura files
-xccov-to-sonarqube-generic.sh $BUILD_DIR/Logs/Test/*.xcresult/ > cobertura.xml || true
-#slather coverage --cobertura-xml --scheme $SCHEME --output-directory . --build-directory $BUILD_DIR $PROJECT.xcodeproj
+slather coverage --sonarqube-xml --scheme GrapeCI --output-directory . --build-directory build GrapeCI.xcodeproj || true
 
 # Upload to Sonar Cloud
 if [ -n "$PR_BRANCH" ]; then
@@ -63,9 +55,9 @@ sonar-scanner \
     -Dsonar.pullrequest.provider=$PROVIDER \
     -Dsonar.pullrequest.github.repository=$REPOSITORY \
     -Dsonar.language=swift \
-    -Dsonar.coverageReportPaths=cobertura.xml \
-    -Dsonar.swift.coverage.reportPattern=cobertura.xml \
-    -Dsonar.swift.swiftLint.reportPaths=swiftlint.json || true
+    -Dsonar.coverageReportPaths=sonarqube-generic-coverage.xml \
+    -Dsonar.swift.coverage.reportPattern=sonarqube-generic-coverage.xml \
+    -Dsonar.swift.swiftLint.reportPaths=swiftlint.json  || true
 
 else
 
@@ -77,9 +69,8 @@ sonar-scanner \
     -Dsonar.sources=$SOURCES_DIR \
     -Dsonar.tests=$TESTS_DIR \
     -Dsonar.language=swift \
-    -Dsonar.coverageReportPaths=cobertura.xml \
-    -Dsonar.swift.coverage.reportPattern=cobertura.xml \
+    -Dsonar.coverageReportPaths=sonarqube-generic-coverage.xml \
+    -Dsonar.swift.coverage.reportPattern=sonarqube-generic-coverage.xml \
     -Dsonar.swift.swiftLint.reportPaths=swiftlint.json || true
     
 fi
-

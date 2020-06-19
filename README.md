@@ -86,4 +86,4 @@ sudo gem install slather
 sudo gem install xcpretty
 brew install sonar-scanner
 brew install carthage
-
+brew install sourcery

@@ -205,6 +205,7 @@
 		8C3895AD243AFF75005DFDB1 /* CallstackPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallstackPredicate.swift; sourceTree = "<group>"; };
 		8C4355AB244EBC1700F92739 /* AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		8C562123243DE927004A8C0E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		8C6EBFB0249C8FA800E1B227 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8C7EDD4824371AD2000991BD /* BitBucketError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketError.swift; sourceTree = "<group>"; };
 		8C7EDD4A24379F81000991BD /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		8C7EDD5624387BD3000991BD /* FetchGitRepositoriesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGitRepositoriesInteractorTests.swift; sourceTree = "<group>"; };
@@ -405,6 +406,7 @@
 		8C1C686D2427D47F008C6176 = {
 			isa = PBXGroup;
 			children = (
+				8C6EBFB0249C8FA800E1B227 /* README.md */,
 				8C1C68782427D47F008C6176 /* GrapeCI */,
 				8C1C688B2427D481008C6176 /* GrapeCITests */,
 				8C1C68772427D47F008C6176 /* Products */,

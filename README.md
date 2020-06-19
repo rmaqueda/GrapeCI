@@ -79,11 +79,16 @@ The project is an early state, if you think is useful for you or you want to con
 
 
 
-## Dependencies
+## Some shell dependencies
 
 sudo gem install cocoapods
+
 sudo gem install slather
+
 sudo gem install xcpretty
+
 brew install sonar-scanner
+
 brew install carthage
+
 brew install sourcery

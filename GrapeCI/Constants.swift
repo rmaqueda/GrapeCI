@@ -20,7 +20,7 @@ struct Constants {
 
     static let appName = "GrapeCI"
 
-    static let pullInterval: TimeInterval = 120
+    static let pullInterval: TimeInterval = 300
 
     static let bitBucketAPI = URL(string: "https://api.bitbucket.org")!
     static let bitBucketClientId = Secrets.BitBucket.clientId

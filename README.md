@@ -11,7 +11,7 @@
 
 ## What is GrapeCI?
 
-It's a work in progress, **serverless**, continuous integration software written in Swift.
+It's a work in progress, open source, **serverless**, continuous integration software written in Swift.
 
 Connect your Bitbucket or GitHub accounts and set up a build script for yours repository.
 GrapeCI launch the build script when these changes are detected:

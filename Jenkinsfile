@@ -24,6 +24,12 @@ node {
 	    '''
 		}
 
+		post {
+    	always {
+				junit 'fastlane/test_output/*.junit'
+			}
+		}
+
 	}
 
 }

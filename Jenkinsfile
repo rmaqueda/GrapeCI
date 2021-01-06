@@ -2,10 +2,6 @@ pipeline {
 
   agent any
 
-  options {
-    ansiColor('xterm')
-  }
-
   environment {
     KEYCHAIN = "${HOME}/Library/Keychains/login.keychain-db"
     KEYCHAIN_PASSWORD = credentials('KEYCHAIN_PASSWORD')
@@ -19,12 +15,6 @@ pipeline {
       }
     }
 
-  	stage('Install Bundle depencies') {
-  		steps {
-				sh 'bundle install'
-			}
-		}
-
 	  stage('Install Carthage depencies') {
 	  	steps {
 				sh 'carthage update --platform macos'
@@ -33,7 +23,7 @@ pipeline {
 
 		stage('Test') {
 			steps {
-				sh 'bundle exec fastlane macos tests'
+				sh 'fastlane macos tests'
 			}
 		}
 

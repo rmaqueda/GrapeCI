@@ -86,12 +86,12 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "BITBUCKET_CLIENT_ID"
-            value = ""
+            value = "YQXPZUb8J6wclsNtov9mLxC9HZN23n22"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "BITBUCKET_CLIENT_SECRET"
-            value = ""
+            value = "ATOAwRFJ-DF7IrDgJtUPAjvwEGf4y8NgRlxWC-oAgVh6oiCw6KEuOhUFSuKswYTWRK1KFC8C06EF"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable

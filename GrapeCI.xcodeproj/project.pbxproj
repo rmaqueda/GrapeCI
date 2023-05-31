@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,7 +27,6 @@
 		74BDAF66246167400007E63E /* LoggedProvider+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDAF64246167400007E63E /* LoggedProvider+CoreDataClass.swift */; };
 		74BDAF67246167400007E63E /* LoggedProvider+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDAF65246167400007E63E /* LoggedProvider+CoreDataProperties.swift */; };
 		74FADBC7245BD7050011AFF7 /* OAuth2DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FADBC6245BD7050011AFF7 /* OAuth2DataLoader.swift */; };
-		74FADBCC245BDA230011AFF7 /* OAuth2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C26C28424286E33003BFADE /* OAuth2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C0458B22440305C00CB8F6B /* AutoSpy.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0458B02440301200CB8F6B /* AutoSpy.generated.swift */; };
 		8C0458BC2440432B00CB8F6B /* IntegratePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0458BB2440432B00CB8F6B /* IntegratePresenterTests.swift */; };
 		8C0458BF2440472900CB8F6B /* IntegrateInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0458BE2440472900CB8F6B /* IntegrateInteractorTests.swift */; };
@@ -70,6 +69,8 @@
 		8C8CF6C1242B498200A8B0C9 /* FetchGitRepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8CF6C0242B498200A8B0C9 /* FetchGitRepositoriesInteractor.swift */; };
 		8CAD2FB124404B9000969D76 /* StatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2FB024404B9000969D76 /* StatusProtocol.swift */; };
 		8CAD2FB42440522000969D76 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD2FB22440522000969D76 /* StatusViewController.swift */; };
+		8CB4D4812A21E1C9004B44D2 /* OAuth2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB4D4802A21E1C9004B44D2 /* OAuth2.xcframework */; };
+		8CB4D4822A21E1C9004B44D2 /* OAuth2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB4D4802A21E1C9004B44D2 /* OAuth2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CB554892442E53E00E21E50 /* GitHubBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB554882442E53E00E21E50 /* GitHubBuild.swift */; };
 		8CB9BF8824307103002EC8D2 /* BitBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF8724307103002EC8D2 /* BitBucket.swift */; };
 		8CB9BF8B243073D7002EC8D2 /* BitBucketPaginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BF8A243073D7002EC8D2 /* BitBucketPaginated.swift */; };
@@ -145,7 +146,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				74FADBCC245BDA230011AFF7 /* OAuth2.framework in Embed Frameworks */,
+				8CB4D4822A21E1C9004B44D2 /* OAuth2.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +239,7 @@
 		8CA0F5BD244369A200156E63 /* BitBucketCommits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitBucketCommits.json; sourceTree = "<group>"; };
 		8CAD2FB024404B9000969D76 /* StatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProtocol.swift; sourceTree = "<group>"; };
 		8CAD2FB22440522000969D76 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		8CB4D4802A21E1C9004B44D2 /* OAuth2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OAuth2.xcframework; path = Carthage/Build/OAuth2.xcframework; sourceTree = "<group>"; };
 		8CB554882442E53E00E21E50 /* GitHubBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubBuild.swift; sourceTree = "<group>"; };
 		8CB9BF8724307103002EC8D2 /* BitBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitBucket.swift; sourceTree = "<group>"; };
 		8CB9BF8A243073D7002EC8D2 /* BitBucketPaginated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitBucketPaginated.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB4D4812A21E1C9004B44D2 /* OAuth2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +544,7 @@
 		8C26C28324286E33003BFADE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CB4D4802A21E1C9004B44D2 /* OAuth2.xcframework */,
 				8C26C28424286E33003BFADE /* OAuth2.framework */,
 			);
 			name = Frameworks;

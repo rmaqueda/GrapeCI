@@ -2,3 +2,6 @@ Carthage/Build/
 Carthage/Checkouts/
 .idea
 build/
+
+## User settings
+xcuserdata/

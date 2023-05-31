@@ -36,7 +36,7 @@ extension BitBucket {
                            title: $0.title,
                            number: $0.identifier,
                            origin: GitBranch(name: $0.source.branch.name,
-                                             lastCommit: GitCommit(sha: $0.source.commit.hash)) ,
+                                             lastCommit: GitCommit(sha: $0.source.commit.hash)),
                            destination: GitBranch(name: $0.destination.branch.name,
                                                   lastCommit: GitCommit(sha: $0.destination.commit.hash)),
                            link: $0.links.html.href)

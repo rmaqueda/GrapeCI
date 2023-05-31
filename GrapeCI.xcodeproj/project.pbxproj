@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -880,7 +880,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C1C68912427D481008C6176 /* Build configuration list for PBXNativeTarget "GrapeCI" */;
 			buildPhases = (
-				8C17AB1B2440DC7700D8B85A /* Lint */,
+				8C17AB1B2440DC7700D8B85A /* Swiftlint */,
 				8C1C68722427D47F008C6176 /* Sources */,
 				8C1C68732427D47F008C6176 /* Frameworks */,
 				8C1C68742427D47F008C6176 /* Resources */,
@@ -920,8 +920,9 @@
 		8C1C686E2427D47F008C6176 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "Ricardo Maqueda Martinez";
 				TargetAttributes = {
 					8C1C68752427D47F008C6176 = {
@@ -993,6 +994,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		8C0458C02440486C00CB8F6B /* Sourcery */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1007,10 +1009,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which sourcery >/dev/null; then\n    sourcery --sources ./GrapeCI --templates ./GrapeCITests/Support\\ Files/SourceryTemplates --output ./GrapeCITests/SpyObjects --args module=\"GrapeCI\",import=\"Foundation\",import=\"Cocoa\",import=\"Combine\"\nelse\n  echo \"warning: Sourcery is not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#if which sourcery >/dev/null; then\n    /opt/homebrew/bin/sourcery --sources ./GrapeCI --templates ./GrapeCITests/Support\\ Files/SourceryTemplates --output ./GrapeCITests/SpyObjects --args module=\"GrapeCI\",import=\"Foundation\",import=\"Cocoa\",import=\"Combine\"\n#else\n#  echo \"warning: Sourcery is not installed, download from #https://github.com/krzysztofzablocki/Sourcery\"\n#fi\n";
+			showEnvVarsInLog = 0;
 		};
-		8C17AB1B2440DC7700D8B85A /* Lint */ = {
+		8C17AB1B2440DC7700D8B85A /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1018,14 +1022,14 @@
 			);
 			inputPaths = (
 			);
-			name = Lint;
+			name = Swiftlint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  cd GrapeCI\n  swiftlint\nelse\n  echo \"warning: SwiftLint is not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#if which swiftlint >/dev/null; then\n  cd GrapeCI\n  /opt/homebrew/bin/swiftlint\n#else\n#  echo \"warning: SwiftLint is not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1186,6 +1190,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1247,6 +1252,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1275,6 +1281,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1300,6 +1307,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1324,6 +1332,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = FZ32CY9FLM;
 				INFOPLIST_FILE = "GrapeCITests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1346,6 +1355,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = FZ32CY9FLM;
 				INFOPLIST_FILE = "GrapeCITests/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

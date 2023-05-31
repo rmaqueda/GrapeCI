@@ -108,7 +108,7 @@ extension ZipCollection {
 }
 
 /// A generic structure around a FIFO collection
-fileprivate final class Queue<T> {
+private final class Queue<T> {
     typealias Element = T
 
     private var elements = [Element]()

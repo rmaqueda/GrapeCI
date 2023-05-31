@@ -1,6 +1,5 @@
-// Generated using Sourcery 0.18.0 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 2.0.2 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
-
 
 import Foundation
 import Cocoa
@@ -154,7 +153,7 @@ public class SpyGitProviderAdapter: GitProviderAdapter, TestSpy {
         return buildsResult
     }
     public var createBuildResult: AnyPublisher<GitBuild, Error>!
-    public func createBuild(repository: GitRepository,                     commit: GitCommit,                     state: GitBuildState) -> AnyPublisher<GitBuild, Error> {
+    public func createBuild(repository: GitRepository, commit: GitCommit, state: GitBuildState) -> AnyPublisher<GitBuild, Error> {
         callstack.record(.createBuild(repository: repository , commit: commit , state: state ))
         return createBuildResult
     }
@@ -205,7 +204,7 @@ public class SpyGitProviderProtocol: GitProviderProtocol, TestSpy {
         callstack.record(.integratedRepositories)
         return integratedRepositoriesResult
     }
-    public func integrate(repository: GitRepository,                   progress: @escaping (String) -> Void,                   completion: @escaping (ShellResult) -> Void) {
+    public func integrate(repository: GitRepository, progress: @escaping (String) -> Void, completion: @escaping (ShellResult) -> Void) {
         callstack.record(.integrate(repository: repository ))
     }
     public func deIntegrate(repository: GitRepository) {
@@ -227,7 +226,7 @@ public class SpyGitProviderProtocol: GitProviderProtocol, TestSpy {
         return fetchRepositoriesResult
     }
     public var createBuildResult: AnyPublisher<GitBuild, Error>!
-    public func createBuild(repository: GitRepository,                     commit: GitCommit,                     state: GitBuildState) -> AnyPublisher<GitBuild, Error> {
+    public func createBuild(repository: GitRepository, commit: GitCommit, state: GitBuildState) -> AnyPublisher<GitBuild, Error> {
         callstack.record(.createBuild(repository: repository , commit: commit , state: state ))
         return createBuildResult
     }
@@ -244,7 +243,7 @@ public class SpyIntegrateInteractorProtocol: IntegrateInteractorProtocol, TestSp
 	}
 	public var callstack = CallstackContainer<Method>()
     public init() {}
-    public func integrate(repository: GitRepository,                   progress: @escaping (String) -> Void,                   completion: @escaping (ShellResult) -> Void) {
+    public func integrate(repository: GitRepository, progress: @escaping (String) -> Void, completion: @escaping (ShellResult) -> Void) {
         callstack.record(.integrate(repository: repository ))
     }
     public func deIntegrate(repository: GitRepository) {
@@ -280,7 +279,7 @@ public class SpyIntegratePresenterProtocol: IntegratePresenterProtocol, TestSpy 
     public var underlyingDeIntegrateButtonTitle: String!
 	public var callstack = CallstackContainer<Method>()
     public init() {}
-    public func integrate(pipeline: String,                   progress: @escaping (String) -> Void,                   completion: @escaping (ShellResult) -> Void) {
+    public func integrate(pipeline: String, progress: @escaping (String) -> Void, completion: @escaping (ShellResult) -> Void) {
         callstack.record(.integrate(pipeline: pipeline ))
     }
     public func deIntegrate() {

@@ -9,9 +9,9 @@
 import Foundation
 
 struct BitBucketCommit: Codable {
-    //let rendered: Rendered
+//    let rendered: Rendered
     let hash: String
-    //let repository: Repository
+//    let repository: Repository
 //    let links: BitBucketComitLinks
 //    let author: Author
 //    let summary: Summary

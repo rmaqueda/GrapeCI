@@ -77,7 +77,7 @@ struct GitHubRepository: Codable {
     let archived: Bool
     let disabled: Bool
     let openIssuesCount: Int
-    //let license: String?
+//    let license: String?
     let forks: Int
     let openIssues: Int
     let watchers: Int
@@ -160,7 +160,7 @@ struct GitHubRepository: Codable {
         case archived
         case disabled
         case openIssuesCount = "open_issues_count"
-        //case license = "license"
+//        case license = "license"
         case forks
         case openIssues = "open_issues"
         case watchers

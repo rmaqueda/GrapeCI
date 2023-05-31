@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-protocol SchedulerDelegate: class {
+protocol SchedulerDelegate: AnyObject {
     func didRefreshRepositories(repositories: [GitRepository])
 }
 

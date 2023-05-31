@@ -32,7 +32,7 @@ class BuilderController {
         }
 
         for repository in repositories {
-            //TODO: Remove after finish testing integrations.
+//            TODO: Remove after finish testing integrations.
             guard !repository.fullName.contains("tda") else { continue }
 
             if let builds = repository.defaultBranch.lastCommit?.builds, buildIsNeeded(builds: builds) {

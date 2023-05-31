@@ -34,7 +34,7 @@ extension GitHub {
             GitPullRequest(identifier: String($0.identifier),
                            title: $0.title,
                            number: $0.number,
-                           origin: GitBranch(name: $0.head.ref, lastCommit: GitCommit(sha: $0.head.sha)) ,
+                           origin: GitBranch(name: $0.head.ref, lastCommit: GitCommit(sha: $0.head.sha)),
                            destination: GitBranch(name: $0.base.ref, lastCommit: GitCommit(sha: $0.base.sha)),
                            link: $0.links.html.href)
         }
